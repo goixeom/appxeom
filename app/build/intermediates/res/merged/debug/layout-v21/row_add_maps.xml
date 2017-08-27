@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true"
+    android:layout_marginEnd="16dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="100dp"
+    app:cardCornerRadius="@dimen/radius_map_card"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/ll_add_from_root"
+        app:cardCornerRadius="@dimen/radius_map_card"
+        app:cardBackgroundColor="@color/white"
+        app:cardPreventCornerOverlap="true"
+        app:cardElevation="5dp"
+        app:contentPadding="@dimen/padding_card_dialog_map"
+        app:cardUseCompatPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_add_from"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_add"
+            android:orientation="horizontal"
+          >
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="8dp"
+                app:srcCompat="@drawable/ic_dot_red" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <goixeom.com.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="Bạn đang ở đây"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+
+                <goixeom.com.CustomTextView
+                    android:id="@+id/edt_from"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:gravity="center_vertical"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:layout_marginTop="4dp"
+                    android:text="Vị trí hiện tại"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="6dp"
+                android:layout_marginStart="8dp"
+                app:srcCompat="@drawable/ic_pencil" />
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+    <!--        android:layout_height="@dimen/size_add"
+    -->
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true"
+    android:padding="16dp"
+    android:visibility="gone"
+    android:id="@+id/ll_add_bottom"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_from"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="3dp"
+
+        android:gravity="center_vertical">
+
+        <ImageView
+            style="@style/img_dot_add_from"
+            app:srcCompat="@drawable/ic_local_pink" />
+
+        <LinearLayout style="@style/layout_add_from">
+
+            <goixeom.com.CustomTextView
+                android:id="@+id/tv_add_from_info"
+                style="@style/text_add_from"
+                android:text="Địa điểm đón"
+                android:textSize="@dimen/size_text_normal_detail_booking" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_from"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical|left"
+        android:paddingBottom="5dp">
+
+        <ImageView
+            style="@style/pin_add_des"
+            app:srcCompat="@drawable/ic_pin_black_200" />
+
+        <LinearLayout style="@style/layout_add_des">
+
+            <goixeom.com.CustomTextView
+                android:id="@+id/tv_add_des_info"
+                style="@style/text_add_des"
+                android:gravity="center_vertical"
+                android:text="Địa điểm đến gggppp"
+                android:textSize="@dimen/size_text_normal_detail_booking"
+                />
+        </LinearLayout>
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_marginTop="16dp"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/ic_directions_target"
+                />
+            <goixeom.com.CustomTextView
+                android:id="@+id/tv_time_bottom"
+
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="38dp"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:lines="2"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textColor="@color/color_pin"/>
+        </RelativeLayout>
+        <goixeom.com.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:text="Cách điểm đến "
+            android:gravity="center_vertical"
+            android:lines="2"
+            android:textSize="22sp"
+            android:textColor="@color/color_pin"/>
+    </LinearLayout>
+    <goixeom.com.CustomTextView
+        android:id="@+id/tv_distance_bottom"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:textColor="@color/color_pin"/>
+</LinearLayout>
+</LinearLayout>
+                

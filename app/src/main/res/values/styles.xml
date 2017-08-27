@@ -1,0 +1,234 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/gray_light</item>
+        <item name="colorPrimaryDark">@color/gray_light</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">@color/gray_light</item>
+        <item name="android:textViewStyle">@style/RobotoFont</item>
+
+    </style>
+    <style name="ToolBarStyle" parent="Theme.AppCompat">
+        <item name="android:textColorPrimary">@color/color_pin</item>
+        <item name="android:textColorSecondary">@color/color_pin</item>
+        <item name="actionMenuTextColor">@color/color_pin</item>
+
+    </style>
+    <style name="AppThemeCard" parent="carbon_Theme.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/gray</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">@color/gray_light</item>
+        <item name="android:textViewStyle">@style/RobotoFont</item>
+
+    </style>
+    <style name="NavigationViewStyle">
+        <item name="android:textSize">14sp</item> <!-- menu item text size-->
+        <item name="android:listPreferredItemHeightSmall">24dp</item><!-- menu item height-->
+    </style>
+    <style name="RobotoFont" parent="android:Widget.Holo.Light.TextView">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/tab_text_selector</item>
+        <item name="android:lineSpacingExtra">3dp</item>
+    </style>
+    <style name="CollapsedAppBar" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/color_pin</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="ExpandAppBar" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">@color/color_pin</item>
+        <item name="android:layout_marginLeft">-36dp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" >
+        <item name="android:textColorPrimary">@color/color_pin</item>
+        <item name="android:textColorSecondary">@color/color_pin</item>
+        <item name="actionMenuTextColor">@color/color_pin</item>
+        </style>
+
+    <style name="NavigationDrawerStyle">
+        <item name="android:textSize">@dimen/textTitleSize</item>
+        <item name="android:listPreferredItemHeightSmall">24dp</item><!-- menu item height-->
+
+    </style>
+    <style name="ThemeToolbar" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/gray</item>
+    </style>
+    <style name="AppThemeMap" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">#ffffff</item>
+    </style>
+
+    <style name="edt_code">
+        <item name="android:textSize">@dimen/size_txt_code</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:imeOptions">actionNext</item>
+        <item name="android:maxLength">1</item>
+        <item name="android:inputType">number</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="linear_booking">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="RatingBarFull" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/rating_bar_full</item>
+        <item name="android:minHeight">15dp</item>
+        <item name="android:maxHeight">15dp</item>
+    </style>
+
+    <style name="loading">
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginTop">30dp</item>
+    </style>
+
+    <style name="SCBSwitch" parent="Theme.AppCompat.Light">
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">#2fb35f</item>
+
+        <!-- inactive thumb color -->
+        <item name="colorSwitchThumbNormal">#f1f1f1
+        </item>
+
+        <!-- inactive track color (30% transparency) -->
+        <item name="android:colorForeground">#42221f1f
+        </item>
+    </style>
+
+    <style name="DialogProgress" parent="@style/Theme.AppCompat">
+        <item name="colorAccent">@color/green</item>
+    </style>
+
+    <style name="DialogProgressBooking" parent="@style/Theme.AppCompat">
+        <item name="colorAccent">@color/white</item>
+    </style>
+
+    <style name="styleRadio">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@null</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:drawableTop">@drawable/selector_radio_funy</item>
+        <item name="android:gravity">bottom|center</item>
+        <item name="android:drawablePadding">6dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:checked">false</item>
+    </style>
+
+    <style name="location_textview_background">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/size_add</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:isScrollContainer">true</item>
+        <item name="android:marqueeRepeatLimit">marquee_forever</item>
+        <item name="android:scrollHorizontally">true</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:paddingRight">24dp</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <style name="location_bg_layout_address">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:background">@drawable/map_bg_gray_card_border</item>
+        <item name="android:paddingLeft">16dp</item>
+    </style>
+
+    <style name="divVer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/gray_light_100</item>
+    </style>
+
+    <style name="divHorizontal">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/gray_light_100</item>
+    </style>
+
+    <style name="text_content_dialog_booking">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_pin</item>
+        <item name="android:textSize">@dimen/size_text_dimen_dialog_booking_medium</item>
+    </style>
+
+    <style name="title_text_dialog_booking">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:textSize">@dimen/size_text_dimen_dialog_booking_small</item>
+    </style>
+
+    <style name="img_dot_add_from">
+        <item name="android:layout_width">18dp</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:layout_gravity">top</item>
+        <item name="android:layout_marginTop">3dp</item>
+    </style>
+
+    <style name="layout_add_from">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="text_add_from">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:isScrollContainer">true</item>
+        <item name="android:marqueeRepeatLimit">marquee_forever</item>
+        <item name="android:scrollHorizontally">true</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="pin_add_des">
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:layout_gravity">left</item>
+        <item name="android:gravity">left</item>
+    </style>
+
+    <style name="text_add_des">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:isScrollContainer">true</item>
+        <item name="android:marqueeRepeatLimit">marquee_forever</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:scrollHorizontally">true</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="layout_add_des">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">7dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/gray_light"
+        android:width="64dp"
+        android:height="64dp"/>
+    <item
+        android:bottom="@dimen/size_padding_rad"
+        android:drawable="@drawable/ic_user_icon_non"
+        android:left="@dimen/size_padding_rad"
+        android:right="@dimen/size_padding_rad"
+        android:top="@dimen/size_padding_rad" />
+</layer-list>

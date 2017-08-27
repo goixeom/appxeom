@@ -1,0 +1,191 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+   >
+    <RelativeLayout
+        android:visibility="visible"
+        android:background="@color/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:id="@+id/frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_margin_top_detail_discount"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="-23dp"
+            android:layout_marginRight="-23dp"
+            android:background="@drawable/layer_bg" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="@dimen/size_layout_margin_top_detail_discount"
+            android:orientation="vertical"
+            android:visibility="visible">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/img"
+                    android:layout_width="@dimen/size_img_avt_dialog"
+                    android:layout_height="@dimen/size_img_h_avt_dialog"
+                    android:layout_gravity="top"
+                    android:scaleType="fitXY"
+                    app:riv_corner_radius="15dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/size_padding_top_layout_name_detail_discount">
+                    <goixeom.com.CustomTextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:ellipsize="marquee"
+                        android:gravity="center"
+                        android:text="sâsasas"
+                        android:isScrollContainer="true"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <goixeom.com.CustomTextView
+                        android:id="@+id/tv_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:lines="3"
+                        android:textColor="@color/gray" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_dot"
+                android:layout_marginLeft="@dimen/size_margin_dialog_content"
+                android:layout_marginRight="@dimen/size_margin_dialog_content"
+                android:layout_marginTop="@dimen/margin_top_dot_detail_discount"
+                app:srcCompat="@drawable/ic_dot_line_dialog" />
+
+            <carbon.widget.Button
+                android:id="@+id/code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/size_margin_detail_discount"
+                android:background="@color/colorAccent"
+                android:paddingBottom="@dimen/size_padding_top_discount"
+                android:paddingLeft="@dimen/size_padding_discount"
+                android:paddingRight="@dimen/size_padding_discount"
+                android:paddingTop="@dimen/size_padding_top_discount"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:text="GỌI XE ÔM"
+                android:textStyle="bold"
+                app:carbon_backgroundTint="@color/colorAccent"
+                app:carbon_cornerRadius="5dp"
+                app:carbon_elevation="5dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/btn_previous"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tint="@color/gray"
+                    app:srcCompat="@drawable/ic_back" />
+
+                <goixeom.com.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Thời gian áp dụng"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/btn_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:rotation="180"
+                    android:tint="@color/gray"
+                    app:srcCompat="@drawable/ic_back" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_margin_detail_discount"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+
+                <goixeom.com.CustomTextView
+                    android:id="@+id/time_start"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_txt_gray_light"
+                    android:gravity="center"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:textColor="#4A4A4A"
+                    android:textSize="14sp" />
+
+                <goixeom.com.CustomTextView
+                    android:id="@+id/time_end"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_txt_gray_light"
+                    android:gravity="center"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:textColor="#4A4A4A"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_bottom_fab_detail_discount"
+        android:layout_marginRight="@dimen/margin_right_fab_detail_discount"
+        android:tint="@color/white"
+        app:backgroundTint="@color/pink_red"
+        app:fabSize="normal"
+        app:layout_anchor="@id/frame"
+        app:layout_anchorGravity="bottom|end"
+        app:rippleColor="@color/red"
+        app:srcCompat="@drawable/ic_close_black_24dp" />
+</android.support.design.widget.CoordinatorLayout>

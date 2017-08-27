@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dimen_padding_add_dialog_driver">-3sp</dimen>
+    <dimen name="margin_add_dialog_booking">10dp</dimen>
+    <dimen name="margin_bottom_dialog_booking">15px</dimen>
+    <dimen name="margin_bottom_fab_detail_discount">35dp</dimen>
+    <dimen name="margin_layout_dialog_booking">40dp</dimen>
+    <dimen name="margin_left_dialog_booking">-300px</dimen>
+    <dimen name="margin_right_dialog_booking">450px</dimen>
+    <dimen name="margin_text_ok_dialog_booking">10dp</dimen>
+    <dimen name="margin_top_dialog_booking">-100px</dimen>
+    <dimen name="margin_top_dot_detail_discount">4dp</dimen>
+    <dimen name="margin_top_layout_diaog_booking">80dp</dimen>
+    <dimen name="padding_card_dialog_map">4dp</dimen>
+    <dimen name="size_dialog_margin_bottom">8dp</dimen>
+    <dimen name="size_dot">16dp</dimen>
+    <dimen name="size_dot_dialog_booking">14dp</dimen>
+    <dimen name="size_h_compare_booking">210px</dimen>
+    <dimen name="size_h_dialog">35dp</dimen>
+    <dimen name="size_img_avt_dialog">100dp</dimen>
+    <dimen name="size_img_h_avt_dialog">110dp</dimen>
+    <dimen name="size_layout_margin_top_detail_discount">100dp</dimen>
+    <dimen name="size_margin_bt_fab_inputcode">65dp</dimen>
+    <dimen name="size_margin_detail_discount">20dp</dimen>
+    <dimen name="size_margin_dialog_content">10dp</dimen>
+    <dimen name="size_margin_rate_vote">14dp</dimen>
+    <dimen name="size_margin_top_detail_discount">40dp</dimen>
+    <dimen name="size_margin_top_layout_rate_vote">85dp</dimen>
+    <dimen name="size_padding_discount">18dp</dimen>
+    <dimen name="size_padding_top_discount">14dp</dimen>
+    <dimen name="size_pin_map_booking">20dp</dimen>
+    <dimen name="size_rate_margin_rate_vote">6dp</dimen>
+    <dimen name="size_text_margin_txt_countdown">20dp</dimen>
+    <dimen name="size_text_normal_detail_booking">14sp</dimen>
+    <dimen name="size_text_xephang">16sp</dimen>
+    <dimen name="size_w_dialog">125dp</dimen>
+</resources>

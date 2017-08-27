@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contentview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_maps_call_driver">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/ll_map"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/toolbar" />
+
+            <LinearLayout
+                android:id="@+id/llcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_gray"
+                android:orientation="vertical">
+
+                <com.skyfishjy.library.RippleBackground xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/content"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:paddingBottom="60dp"
+                    app:rb_color="#6dedeef7"
+                    app:rb_duration="3000"
+                    app:rb_radius="24dp"
+                    app:rb_rippleAmount="6"
+                    app:rb_scale="6">
+
+                    <ImageButton
+                        android:id="@+id/maker_imb"
+                        android:layout_width="30dp"
+                        android:layout_height="34dp"
+                        android:layout_centerInParent="true"
+                        android:background="@android:color/transparent"
+                        android:paddingTop="10dp"
+                        app:srcCompat="@drawable/ic_navigator" />
+                </com.skyfishjy.library.RippleBackground>
+
+                <include layout="@layout/row_call" />
+            </LinearLayout>
+
+
+            <include layout="@layout/row_rate_vote" />
+
+            <include layout="@layout/row_driver" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-40dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/row_time_drivergo" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

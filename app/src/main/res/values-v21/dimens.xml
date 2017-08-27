@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<dimen name="size_width_img">128dp</dimen>-->
+    <!--<dimen name="padding_img">110dp</dimen>-->
+    <!--<dimen name="size_txt_code">45dp</dimen>-->
+    <!--&lt;!&ndash; Default screen margins, per the Android Design guidelines. &ndash;&gt;-->
+    <!--<dimen name="activity_horizontal_margin">16dp</dimen>-->
+    <!--<dimen name="activity_vertical_margin">16dp</dimen>-->
+    <!--<dimen name="nav_header_vertical_spacing">16dp</dimen>-->
+    <!--<dimen name="nav_header_height">160dp</dimen>-->
+    <!--<dimen name="fab_margin">16dp</dimen>-->
+    <!--<dimen name="nav_height">200dp</dimen>-->
+
+
+
+    <!--<dimen name="radius_dialog">5dp</dimen>-->
+    <!--<dimen name="radius">8dp</dimen>-->
+    <!--<dimen name="fb">24dp</dimen>-->
+    <!--<dimen name="size_ll_add">64dp</dimen>-->
+    <!--<dimen name="size_margin_line_map">28dp</dimen>-->
+    <!--<dimen name="size_margin_dot_map">22dp</dimen>-->
+    <!--<dimen name="size_margin_dot_map_2">22dp</dimen>-->
+    <!--<dimen name="size_dot_map">16dp</dimen>-->
+
+    <!--<dimen name="icon_booking">28dp</dimen>-->
+    <!--<dimen name="size_margin_booking">24dp</dimen>-->
+    <!--<dimen name="size_text_booking">12sp</dimen>-->
+    <!--<dimen name="size_text_cost">30sp</dimen>-->
+    <!--<dimen name="size_icon_notification">24dp</dimen>-->
+    <!--<dimen name="margin_top_auth">25dp</dimen>-->
+    <!--<dimen name="size_persion">18dp</dimen>-->
+    <!--<dimen name="size_marker_w">100dp</dimen>-->
+    <!--<dimen name="size_dialog_driver_trip">18sp</dimen>-->
+    <!--<dimen name="margin_empty">80dp</dimen>-->
+    <!--<dimen name="size_img_avt_dialog">89dp</dimen>-->
+    <!--<dimen name="size_text_rate_dialog">40dp</dimen>-->
+    <!--<dimen name="text_price_dialog">36sp</dimen>-->
+    <!--<dimen name="text_km_dialog">16sp</dimen>-->
+    <!--<dimen name="h_ic_dialog">40dp</dimen>-->
+    <!--<dimen name="w_dialog">30dp</dimen>-->
+    <!--<dimen name="text_name_dialog">20sp</dimen>-->
+    <!--<dimen name="text_number_dialog">22sp</dimen>-->
+    <!--<dimen name="text_add_dialog">18sp</dimen>-->
+    <!--<dimen name="size_ok_dialog">48dp</dimen>-->
+    <!--<dimen name="txt_size_big_detail_booking">20sp</dimen>-->
+    <!--<dimen name="size_help">200dp</dimen>-->
+    <!--<dimen name="size_avt_detail">80dp</dimen>-->
+    <!--<dimen name="poliline_width">6dp</dimen>-->
+    <!--<dimen name="poliline_default_width">5dp</dimen>-->
+    <!--<dimen name="size_login_text_login">12sp</dimen>-->
+    <!--<dimen name="size_margin_nav">20dp</dimen>-->
+
+
+</resources>

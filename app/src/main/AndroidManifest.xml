@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/tools"
+    package="goixeom.com">
+
+    <supports-screens android:xlargeScreens="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+
+    <application
+        android:name=".MainApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:persistent="true"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tool:replace="android:allowBackup">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_map_id" />
+
+        <activity
+            android:name=".activities.MapsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.SearchLocationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.BookingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.DiscountActivity"
+            android:label="Khuyến mại"
+            android:screenOrientation="portrait" />
+
+        <!-- FACEBOOK -->
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider805514846270648"
+            android:exported="true" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/fb_id" />
+
+        <service android:name=".socket.SocketClient">
+            <intent-filter>
+                <action android:name="socket" />
+            </intent-filter>
+        </service>
+        <service android:name=".socket.GPSService">
+            <intent-filter>
+                <action android:name="1" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".activities.ChangePasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.FAQActivity"
+            android:label="Phản hồi &amp; góp ý"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.SettingActivity"
+            android:label="Cài đặt"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.AboutUsActivity"
+            android:label="Về chúng tôi"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.NotificationActivity"
+            android:label="Thông báo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.PromotionActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activities.BaseActivity" />
+        <activity
+            android:name=".activities.HistoryActivity"
+            android:label="Chuyến đi của bạn"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.SelectAddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ExecuteBookingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.ActivityPrivacy"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.TestMap"
+            android:label="@string/title_activity_test_map" />
+
+        <receiver android:name=".socket.RestartReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="chayngam.restart" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".socket.InternetReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".activities.DetailBooking"
+            android:hardwareAccelerated="false"
+            android:label="Chi tiết chuyến đi"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCard" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="ccbefe8bed73901cd45eea076d4c1c14d6aaeb63" />
+
+        <activity
+            android:name=".activities.DetailDiscountActivity"
+            android:label="Chi tiết khuyến mại"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCard" />
+        <activity
+            android:name=".activities.NewsActivity"
+            android:label="Tin tức mới"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.InputCodeActivity"
+            android:label="Nhập mã khuyến mại" />
+        <activity
+            android:name=".activities.TabActivity"
+            android:label="@string/title_activity_tab"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.ScrollingActivity"
+            android:label="@string/title_activity_scrolling"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.DetailNotificationActivity"
+            android:label="Chi tiết thông báo" />
+        <activity android:name=".activities.DetailNewsActivity"
+            android:label="Chi tiết tin tức"></activity>
+    </application>
+
+</manifest>

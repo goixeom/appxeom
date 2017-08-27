@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:cardBackgroundColor="@color/carbon_blue_500"
+>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <goixeom.com.CustomTextView
+            android:id="@+id/tv_news_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_news"
+            android:layout_marginTop="@dimen/margin_news"
+            android:padding="8dp"
+            android:text="18/02/2017"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <goixeom.com.CustomTextView
+            android:id="@+id/tv_news_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="@dimen/margin_news"
+            android:layout_marginTop="@dimen/margin_news"
+            android:text="Tin tức mới"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+        <goixeom.com.CustomTextView
+            android:id="@+id/tv_short_description_news"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="@dimen/margin_news"
+            android:layout_marginTop="@dimen/margin_news"
+            android:maxLines="6"
+            android:text="First we had to create a Resources wrapper which overrides the getDrawable() call. For the purpose of this blog post we’ll call it ResourcesWrapper. Its getDrawable() first checks AppCompat’s own internal drawable manager for any custom drawable handling. If AppCompat doesn’t want to handle it, it just leaves it to the framework."
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+        <net.cachapa.expandablelayout.ExpandableLayout
+            android:id="@+id/expandableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:el_duration="500"
+            app:el_expanded="false"
+            >
+        <goixeom.com.CustomTextView
+            android:id="@+id/tv_news_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="@dimen/margin_news"
+            android:layout_marginTop="@dimen/margin_news"
+            android:text="First we had to create a Resources wrapper which overrides the getDrawable() call. For the purpose of this blog post we’ll call it ResourcesWrapper. Its getDrawable() first checks AppCompat’s own internal drawable manager for any custom drawable handling. If AppCompat doesn’t want to handle it, it just leaves it to the framework."
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+        </net.cachapa.expandablelayout.ExpandableLayout>
+        <goixeom.com.CustomTextView
+            android:id="@+id/tv_more"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_news"
+            android:background="@color/carbon_blue_600"
+            android:padding="16dp"
+            android:paddingLeft="@dimen/margin_news"
+            android:text="Xem chi tiết"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+</android.support.v7.widget.CardView>

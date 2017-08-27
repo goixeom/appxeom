@@ -1,0 +1,541 @@
+[
+    {
+        "outputFile": "D:\\LanguageProgram\\Android\\SourceCode\\appxeom\\SkyNetInc\\appxeom\\AppKhachHang\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 44,
+                    "endOffset": 95
+                },
+                "from": {
+                    "file": "C:\\Users\\DuongKK\\.android\\build-cache\\620548de1061af5a4ebf634541898397df4d6e24\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 44,
+                        "endOffset": 95
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 100,
+                    "endColumn": 41,
+                    "endOffset": 137
+                },
+                "from": {
+                    "file": "C:\\Users\\DuongKK\\.android\\build-cache\\53187e063d4722a57f3fb22794458e7072abee0d\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 41,
+                        "endOffset": 92
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 142,
+                    "endColumn": 68,
+                    "endOffset": 206
+                },
+                "from": {
+                    "file": "C:\\Users\\DuongKK\\.android\\build-cache\\77c1760345ce21c7d60a8066084bd228a54d3c4c\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 68,
+                        "endOffset": 119
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 211,
+                    "endColumn": 68,
+                    "endOffset": 275
+                },
+                "from": {
+                    "file": "C:\\Users\\DuongKK\\.android\\build-cache\\77c1760345ce21c7d60a8066084bd228a54d3c4c\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 124,
+                        "endColumn": 68,
+                        "endOffset": 188
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 280,
+                    "endColumn": 69,
+                    "endOffset": 345
+                },
+                "from": {
+                    "file": "C:\\Users\\DuongKK\\.android\\build-cache\\77c1760345ce21c7d60a8066084bd228a54d3c4c\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 193,
+                        "endColumn": 69,
+                        "endOffset": 258
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 350,
+                    "endColumn": 73,
+                    "endOffset": 419
+                },
+                "from": {
+                    "file": "C:\\Users\\DuongKK\\.android\\build-cache\\77c1760345ce21c7d60a8066084bd228a54d3c4c\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 263,
+                        "endColumn": 73,
+                        "endOffset": 332
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 424,
+                    "endColumn": 75,
+                    "endOffset": 495
+                },
+                "from": {
+                    "file": "C:\\Users\\DuongKK\\.android\\build-cache\\77c1760345ce21c7d60a8066084bd228a54d3c4c\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 337,
+                        "endColumn": 75,
+                        "endOffset": 408
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 500,
+                    "endColumn": 58,
+                    "endOffset": 554
+                },
+                "from": {
+                    "file": "C:\\Users\\DuongKK\\.android\\build-cache\\77c1760345ce21c7d60a8066084bd228a54d3c4c\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 413,
+                        "endColumn": 58,
+                        "endOffset": 467
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 559,
+                    "endColumn": 70,
+                    "endOffset": 625
+                },
+                "from": {
+                    "file": "C:\\Users\\DuongKK\\.android\\build-cache\\77c1760345ce21c7d60a8066084bd228a54d3c4c\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 472,
+                        "endColumn": 70,
+                        "endOffset": 538
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 630,
+                    "endColumn": 67,
+                    "endOffset": 693
+                },
+                "from": {
+                    "file": "C:\\Users\\DuongKK\\.android\\build-cache\\77c1760345ce21c7d60a8066084bd228a54d3c4c\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 543,
+                        "endColumn": 67,
+                        "endOffset": 606
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 698,
+                    "endColumn": 50,
+                    "endOffset": 744
+                },
+                "from": {
+                    "file": "C:\\Users\\DuongKK\\.android\\build-cache\\620548de1061af5a4ebf634541898397df4d6e24\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 100,
+                        "endColumn": 50,
+                        "endOffset": 146
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 749,
+                    "endColumn": 51,
+                    "endOffset": 796
+                },
+                "from": {
+                    "file": "C:\\Users\\DuongKK\\.android\\build-cache\\620548de1061af5a4ebf634541898397df4d6e24\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 151,
+                        "endColumn": 51,
+                        "endOffset": 198
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 801,
+                    "endColumn": 55,
+                    "endOffset": 852
+                },
+                "from": {
+                    "file": "C:\\Users\\DuongKK\\.android\\build-cache\\620548de1061af5a4ebf634541898397df4d6e24\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 203,
+                        "endColumn": 55,
+                        "endOffset": 254
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 857,
+                    "endColumn": 58,
+                    "endOffset": 911
+                },
+                "from": {
+                    "file": "C:\\Users\\DuongKK\\.android\\build-cache\\620548de1061af5a4ebf634541898397df4d6e24\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 259,
+                        "endColumn": 58,
+                        "endOffset": 313
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 916,
+                    "endColumn": 51,
+                    "endOffset": 963
+                },
+                "from": {
+                    "file": "C:\\Users\\DuongKK\\.android\\build-cache\\620548de1061af5a4ebf634541898397df4d6e24\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 318,
+                        "endColumn": 51,
+                        "endOffset": 365
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 968,
+                    "endColumn": 51,
+                    "endOffset": 1015
+                },
+                "from": {
+                    "file": "C:\\Users\\DuongKK\\.android\\build-cache\\620548de1061af5a4ebf634541898397df4d6e24\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 370,
+                        "endColumn": 51,
+                        "endOffset": 417
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 1020,
+                    "endColumn": 53,
+                    "endOffset": 1069
+                },
+                "from": {
+                    "file": "C:\\Users\\DuongKK\\.android\\build-cache\\620548de1061af5a4ebf634541898397df4d6e24\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 422,
+                        "endColumn": 53,
+                        "endOffset": 471
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 1074,
+                    "endColumn": 51,
+                    "endOffset": 1121
+                },
+                "from": {
+                    "file": "C:\\Users\\DuongKK\\.android\\build-cache\\620548de1061af5a4ebf634541898397df4d6e24\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 476,
+                        "endColumn": 51,
+                        "endOffset": 523
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 1126,
+                    "endColumn": 59,
+                    "endOffset": 1181
+                },
+                "from": {
+                    "file": "C:\\Users\\DuongKK\\.android\\build-cache\\fb48d3726edba327cf31a3ec4a3edc9befd1a6b6\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 59,
+                        "endOffset": 110
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 21,
+                    "startColumn": 4,
+                    "startOffset": 1186,
+                    "endColumn": 69,
+                    "endOffset": 1251
+                },
+                "from": {
+                    "file": "C:\\Users\\DuongKK\\.android\\build-cache\\fb48d3726edba327cf31a3ec4a3edc9befd1a6b6\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 115,
+                        "endColumn": 69,
+                        "endOffset": 180
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 1256,
+                    "endColumn": 70,
+                    "endOffset": 1322
+                },
+                "from": {
+                    "file": "C:\\Users\\DuongKK\\.android\\build-cache\\fb48d3726edba327cf31a3ec4a3edc9befd1a6b6\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 185,
+                        "endColumn": 70,
+                        "endOffset": 251
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 1327,
+                    "endColumn": 71,
+                    "endOffset": 1394
+                },
+                "from": {
+                    "file": "C:\\Users\\DuongKK\\.android\\build-cache\\fb48d3726edba327cf31a3ec4a3edc9befd1a6b6\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 256,
+                        "endColumn": 71,
+                        "endOffset": 323
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 1399,
+                    "endColumn": 57,
+                    "endOffset": 1452
+                },
+                "from": {
+                    "file": "C:\\Users\\DuongKK\\.android\\build-cache\\fb48d3726edba327cf31a3ec4a3edc9befd1a6b6\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 328,
+                        "endColumn": 57,
+                        "endOffset": 381
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 25,
+                    "startColumn": 4,
+                    "startOffset": 1457,
+                    "endColumn": 57,
+                    "endOffset": 1510
+                },
+                "from": {
+                    "file": "C:\\Users\\DuongKK\\.android\\build-cache\\fb48d3726edba327cf31a3ec4a3edc9befd1a6b6\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 386,
+                        "endColumn": 57,
+                        "endOffset": 439
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 26,
+                    "startColumn": 4,
+                    "startOffset": 1515,
+                    "endColumn": 105,
+                    "endOffset": 1616
+                },
+                "from": {
+                    "file": "C:\\Users\\DuongKK\\.android\\build-cache\\fb48d3726edba327cf31a3ec4a3edc9befd1a6b6\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 444,
+                        "endColumn": 105,
+                        "endOffset": 545
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 27,
+                    "startColumn": 4,
+                    "startOffset": 1621,
+                    "endColumn": 63,
+                    "endOffset": 1680
+                },
+                "from": {
+                    "file": "C:\\Users\\DuongKK\\.android\\build-cache\\fb48d3726edba327cf31a3ec4a3edc9befd1a6b6\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 550,
+                        "endColumn": 63,
+                        "endOffset": 609
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 28,
+                    "startColumn": 4,
+                    "startOffset": 1685,
+                    "endColumn": 62,
+                    "endOffset": 1743
+                },
+                "from": {
+                    "file": "C:\\Users\\DuongKK\\.android\\build-cache\\fb48d3726edba327cf31a3ec4a3edc9befd1a6b6\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 614,
+                        "endColumn": 62,
+                        "endOffset": 672
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 29,
+                    "startColumn": 4,
+                    "startOffset": 1748,
+                    "endLine": 32,
+                    "endColumn": 12,
+                    "endOffset": 1925
+                },
+                "from": {
+                    "file": "C:\\Users\\DuongKK\\.android\\build-cache\\fb48d3726edba327cf31a3ec4a3edc9befd1a6b6\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 677,
+                        "endLine": 14,
+                        "endColumn": 12,
+                        "endOffset": 854
+                    }
+                }
+            }
+        ]
+    }
+]

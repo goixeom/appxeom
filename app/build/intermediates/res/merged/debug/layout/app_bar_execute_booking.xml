@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--<android.support.design.widget.AppBarLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@color/gray"-->
+    <!--android:theme="@style/AppTheme.AppBarOverlay">-->
+
+    <!--<android.support.v7.widget.Toolbar-->
+    <!--android:id="@+id/toolbar"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="?attr/actionBarSize"-->
+    <!--android:background="@color/tab_indicator"-->
+    <!--app:popupTheme="@style/AppTheme.PopupOverlay"-->
+    <!--app:theme="@style/ThemeToolbar"-->
+    <!--android:layout_gravity="start|bottom"-->
+    <!--android:contentInsetLeft="0dp"-->
+    <!--android:contentInsetStart="0dp"-->
+    <!--app:contentInsetLeft="0dp"-->
+    <!--app:contentInsetStart="0dp"-->
+    <!--app:contentInsetStartWithNavigation="0dp"-->
+    <!--android:contentInsetRight="0dp"-->
+    <!--android:contentInsetEnd="0dp"-->
+    <!--app:contentInsetRight="0dp"-->
+    <!--app:contentInsetEnd="0dp"-->
+    <!--android:gravity="center"-->
+    <!--android:layout_marginLeft="-5dp">-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/img_logo_toolbar"-->
+    <!--android:layout_marginLeft="-20dp"-->
+    <!--android:layout_width="@dimen/size_width_img"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--app:srcCompat="@drawable/ic_logo_black"-->
+    <!--android:paddingBottom="4dp"-->
+    <!--android:layout_marginRight="97dp"/>-->
+    <!--</android.support.v7.widget.Toolbar>-->
+
+    <!--</android.support.design.widget.AppBarLayout>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include layout="@layout/content_call_driver" />
+    </LinearLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

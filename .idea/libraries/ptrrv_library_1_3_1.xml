@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="ptrrv-library-1.3.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.android/build-cache/a9a6687b63d939e5b4f16ea8b79fac8c7ac6aa87/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/a9a6687b63d939e5b4f16ea8b79fac8c7ac6aa87/output/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/homhomlin.lib/ptrrv-library/1.3.1/9e634024be07b85eafb559ec10d20c4a66a6ca20/ptrrv-library-1.3.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

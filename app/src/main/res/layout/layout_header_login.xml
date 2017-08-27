@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_button"
+    style="@style/AppTheme"
+    android:id="@+id/layout_header_login"
+    android:orientation="vertical"
+    android:paddingLeft="25dp"
+    android:paddingTop="25dp"
+    android:paddingRight="25dp"
+    android:layout_gravity="top"
+    android:layout_alignParentTop="true"
+    android:gravity="center"
+    android:layout_marginLeft="12dp"
+    android:layout_marginRight="12dp">
+    <goixeom.com.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_login" />
+
+    <goixeom.com.CustomTextView
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:text="Số điện thoại"
+        android:textStyle="bold"
+        android:textColor="@color/color_textview_bold"/>
+
+    <EditText
+        android:layout_marginTop="5dp"
+        android:textColorHint="@color/hint_color"
+        android:id="@+id/edt_phone_login"
+        android:hint="091 000 00 00"
+        android:backgroundTintMode="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:background="@color/tab_indicator"
+        android:textCursorDrawable="@null"/>
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1px"
+        android:layout_marginTop="10dp"
+        android:background="@color/gray_light"/>
+
+    <ImageView
+        android:id="@+id/img_next"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="25dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/selector_btn_arrow"/>
+</LinearLayout>

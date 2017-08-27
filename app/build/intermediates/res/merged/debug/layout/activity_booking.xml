@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    style="@style/AppThemeMap"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:id="@+id/ll_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#DFDFDF"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2">
+
+                <fragment
+                    android:id="@+id/map"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <RelativeLayout
+                    android:id="@+id/ll_go_root"
+                    android:layout_width="@dimen/size_w_dialog"
+                    android:layout_height="@dimen/size_h_dialog"
+                    android:visibility="gone"
+                    >
+                    <ImageView
+                        android:layout_width="@dimen/size_w_dialog"
+                        android:layout_height="@dimen/size_h_dialog"
+                        app:srcCompat="@drawable/ic_dialog_green" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_centerInParent="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <goixeom.com.CustomTextView
+                            android:id="@+id/tv_add_marker"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:paddingRight="@dimen/size_margin_text_dialog"
+                            android:paddingLeft="@dimen/size_margin_left_text_dialog"
+                            android:layout_weight="3"
+                            android:ellipsize="marquee"
+                            android:gravity="center"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:scrollHorizontally="true"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+
+                        <goixeom.com.CustomTextView
+                            android:id="@+id/tv_time_marker"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:maxWidth="40dp"
+                            android:textColor="#fff"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/ll_des_root"
+                    android:layout_width="@dimen/size_w_dialog"
+                    android:layout_height="@dimen/size_h_dialog"
+                    android:visibility="gone"
+                    android:elevation="2dp"
+                    >
+                    <ImageView
+                        android:layout_width="@dimen/size_w_dialog"
+                        android:layout_height="@dimen/size_h_dialog"
+                        app:srcCompat="@drawable/ic_untitled"
+                        android:elevation="2dp"
+                        />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_centerInParent="true"
+                        android:gravity="center_vertical"
+                        android:elevation="2dp"
+                        android:orientation="horizontal">
+                        <goixeom.com.CustomTextView
+                            android:id="@+id/tv_add_marker_des"
+                            android:layout_width="0dp"
+                            android:layout_weight="3"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:scrollHorizontally="true"
+                            android:ellipsize="marquee"
+                            android:paddingRight="@dimen/size_margin_text_dialog"
+                            android:paddingLeft="@dimen/size_margin_left_text_dialog"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+
+
+                        <goixeom.com.CustomTextView
+                            android:id="@+id/tv_price_marker_des"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:maxWidth="40dp"
+                            android:textColor="#fff"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <include layout="@layout/row_booking" />
+        </LinearLayout>
+
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/img_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_back_button"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"/>
+    <ImageView
+        android:id="@+id/discount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_active_coupon"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"/>
+</RelativeLayout>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_light"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/ll_root"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp">
+
+                    <ImageView
+                        android:id="@+id/btn_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="14dp"
+                        android:paddingBottom="16dp"
+                        android:paddingRight="8dp"
+                        app:srcCompat="@drawable/ic_back_button" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="8dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/img"
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            app:srcCompat="@drawable/ic_dot_red" />
+
+                        <ImageView
+                            android:id="@+id/imageView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="4dp"
+                            app:srcCompat="@drawable/ic_line" />
+
+                        <ImageView
+                            android:id="@+id/txt_add"
+                            android:layout_width="@dimen/size_dot_map"
+                            android:layout_height="@dimen/size_dot_map"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            app:srcCompat="@drawable/ic_mapmaker" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:id="@+id/ll_add_from_root"
+                                style="@style/location_bg_layout_address">
+
+                                <RelativeLayout
+                                    android:id="@+id/ll_add_from"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/size_add">
+
+                                    <EditText
+                                        android:id="@+id/edt_add_from"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/size_add"
+                                        android:background="#FBFBFC"
+                                        android:ellipsize="end"
+                                        android:gravity="left|center_vertical"
+                                        android:hint="Vị trí hiện tại"
+                                        android:isScrollContainer="true"
+                                        android:marqueeRepeatLimit="marquee_forever"
+                                        android:scrollHorizontally="true"
+                                        android:layout_marginRight="24dp"
+                                        android:singleLine="true"
+                                        android:textCursorDrawable="@null"
+                                        android:textSize="16dp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_add_from"
+                                        style="@style/location_textview_background"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_alignParentTop="true"
+                                        android:text="Vị trí hiện tại"
+                                        android:textSize="16dp"/>
+
+                                    <requestFocus />
+                                    <ImageView
+                                        android:id="@+id/btn_add"
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginEnd="8dp"
+                                        android:visibility="gone"
+                                        app:srcCompat="@drawable/ic_placeholder" />
+                                </RelativeLayout>
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_below="@+id/ll_add_from_root"
+                                style="@style/location_bg_layout_address"
+                                android:layout_marginTop="8dp"
+                                >
+
+                                <RelativeLayout
+                                    android:id="@+id/ll_add_des"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/size_add">
+                                    <EditText
+                                        android:id="@+id/edt_add_des"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/size_add"
+                                        android:background="#FBFBFC"
+                                        android:gravity="center_vertical|left"
+                                        android:hint="Chọn nơi bạn muốn đến"
+                                        android:inputType="text"
+                                        android:isScrollContainer="true"
+                                        android:marqueeRepeatLimit="marquee_forever"
+                                        android:scrollHorizontally="true"
+                                        android:singleLine="true"
+                                        android:layout_marginRight="24dp"
+                                        android:textCursorDrawable="@null"
+                                        android:textSize="16dp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_add_des"
+                                        style="@style/location_textview_background"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_alignParentTop="true"
+                                        android:text="Chọn nơi bạn muốn đến"
+                                        android:textSize="16dp"/>
+
+
+                                    <ImageView
+                                        android:id="@+id/btn_clear"
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginEnd="8dp"
+                                        android:visibility="gone"
+                                        app:srcCompat="@drawable/ic_placeholder" />
+
+                                </RelativeLayout>
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                </LinearLayout>
+                <RadioGroup
+                    android:id="@+id/rad_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/white"
+                    android:paddingTop="8dp"
+                    android:visibility="visible"
+                >
+
+                    <RadioButton
+                        android:id="@+id/rad_recently"
+                        style="@style/styleRadio"
+                        android:drawableTop="@drawable/selector_radio_recently"
+                        android:checked="true"
+                        />
+                    <RadioButton
+                        android:id="@+id/rad_fav"
+                        style="@style/styleRadio"
+                        android:drawableTop="@drawable/selector_rad_fav"
+                        />
+                    <RadioButton
+                        android:id="@+id/rad_bus"
+                        style="@style/styleRadio"
+                        android:drawableTop="@drawable/selector_radio_bus"
+                        />
+                    <RadioButton
+                        android:id="@+id/rad_shop"
+                        style="@style/styleRadio"
+                        android:drawableTop="@drawable/selector_radio_shop"/>
+                    <RadioButton
+                        android:id="@+id/rad_res"
+                        style="@style/styleRadio"
+                        android:drawableTop="@drawable/selector_radio_food"/>
+                </RadioGroup>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/list_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray_light_100" />
+
+                    <ProgressBar
+                        android:id="@+id/loading"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="20dp"
+                        android:theme="@style/DialogProgress"
+                        android:visibility="visible" />
+                </FrameLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>

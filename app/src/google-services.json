@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "1026901072455",
+    "firebase_url": "https://goixeom-168103.firebaseio.com",
+    "project_id": "goixeom-168103",
+    "storage_bucket": "goixeom-168103.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1026901072455:android:34e58191c3ade9db",
+        "android_client_info": {
+          "package_name": "goixeom.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1026901072455-lmiqb6184hnai9ehp8tjk6s5vo7g0pq5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "goixeom.com",
+            "certificate_hash": "451eceaaff336a1d6ae43f972674a9c285b4aea9"
+          }
+        },
+        {
+          "client_id": "1026901072455-8t3u10vuccq42vl3v8fi3jnusrpld2j2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "goixeom.com",
+            "certificate_hash": "3c2391de28e2e31885e143182a83835b749faf73"
+          }
+        },
+        {
+          "client_id": "1026901072455-bi3k4ivion20bqopk7q31mrgvepkrimp.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "1026901072455-av9jgespivshlsnst4kkos18shhb7ou2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0wagJc0SoE9ttqrTxLSc16ryrhVLddu0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

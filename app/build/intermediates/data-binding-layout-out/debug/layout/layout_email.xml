@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_email"
+    android:layout_width="match_parent"
+    android:layout_alignParentTop="true"
+    android:layout_height="wrap_content"    android:layout_marginTop="@dimen/margin_top_auth"
+
+    >
+
+    <LinearLayout
+        style="@style/AppTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/background_button"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:paddingTop="25dp">
+
+        <goixeom.com.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="3dp"
+            android:text="@string/txt_email" />
+
+        <goixeom.com.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Email"
+            android:textColor="@color/color_textview_bold"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edt_passwork_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@color/tab_indicator"
+            android:backgroundTintMode="@android:color/white"
+            android:hint="Nhập địa chỉ email của bạn"
+            android:inputType="textEmailAddress"
+            android:textColorHint="@color/hint_color"
+            android:textCursorDrawable="@null" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1px"
+            android:layout_marginTop="10dp"
+            android:background="@color/gray_light" />
+
+        <ImageView
+            android:id="@+id/img_send"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="25dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/selector_bt_gui" />
+    </LinearLayout>
+</LinearLayout>

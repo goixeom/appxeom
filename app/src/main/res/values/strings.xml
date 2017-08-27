@@ -1,0 +1,278 @@
+<resources>
+    <string name="app_name">Gọi xe ôm</string>
+    <string name="txt_login">Vui lòng nhập số điện thoại của bạn để truy cập vào hệ thống gọi xe ôm</string>
+    <string name="txt_passwork">Chào mừng bạn đã quay trở lại vui lòng đăng nhập để đặt chuyến</string>
+    <string name="txt_email">Vui lòng nhập địa chỉ Email để lấy lại mật khẩu</string>
+    <string name="txt_forget_pass">Mật khẩu đã được gửi đến Email của bạn, vui lòng kiểm tra email</string>
+    <string name="txt_take_pass" formatted="false">
+        <![CDATA[
+        Mật khẩu của bạn là một dãy số <big>06</big> số. Hãy lưu  mật khẩu ở một nơi an toàn
+        ]]>
+    </string>
+    <string name="txt_update">Cập nhật thông tin của bạn</string>
+    <string name="txt_code" formatted="false">
+        <![CDATA[
+        Nhập mã gồm 04 chữ số được gửi đến số điện thoại <font color=\'#2db25d\'><b>%s</b></font>
+        ]]>
+    </string>
+    <string name="dem_nguoc" formatted="false">
+        <![CDATA[
+        Gửi lại mã trong <font color=\'#000000\'>%s</font>
+        ]]>
+    </string>
+    <string name="distance_booking_format" formatted="false">
+        <![CDATA[
+        Cách điểm đến khoảng <font color=\'#000000\'><b>%s</b></font>
+        ]]>
+    </string>
+    <string name="xep_hang" formatted="false">
+        <![CDATA[
+        Xếp hạng: <font color=\'#000000\'><b>%d</b></font>
+        ]]>
+    </string>
+    <string name="guilaima" formatted="false">
+        <![CDATA[<font color=\'#000000\'> Gửi lại mã</font>
+        ]]>
+    </string>
+    <string name="title_activity_maps">MapsActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="google_map_id">AIzaSyDwvFTLMXpVUKGz9NDXVg7YlL2SCMiLpl8</string>
+
+    <string name="txt_booking" formatted="false">
+        <![CDATA[
+        <b>ƯỚC TÍNH <font color=\'#2db25d\'>CƯỚC PHÍ</b></font>
+        ]]>
+    </string>
+    <string name="txt_detail" formatted="false">
+        <![CDATA[
+        <b>CHI TIẾT <font color=\'#2db25d\'>CHUYẾN ĐI</b></font>
+        ]]>
+    </string>
+    <string name="txt_driver" formatted="false">
+        <![CDATA[
+        <b>%s <font color=\'#e76363\'>%s</b></font>
+        ]]>
+    </string>
+    <string name="txt_format" formatted="false">
+        <![CDATA[
+        %s <font color=\'#000\'>%s</font>
+        ]]>
+    </string>
+    <string name="txt_toolbar_promotion" formatted="false">
+        <![CDATA[
+        <b>NHẬP MÃ <font color=\'#2db25d\'>KHUYẾN MÃI</b></font>
+        ]]>
+    </string>
+    <string name="txt_toolbar_faq" formatted="false">
+        <![CDATA[
+        <b>PHẢN HỒI &<font color=\'#2db25d\'> GÓP Ý</b></font>
+        ]]>
+    </string>
+    <string name="txt_toolbar_promo" formatted="false">
+        <![CDATA[
+        <b>MÃ <font color=\'#2db25d\'>KHUYẾN MẠI</b></font>
+        ]]>
+    </string>
+    <string name="txt_toolbar_history" formatted="false">
+        <![CDATA[
+        <b>LỊCH SỬ <font color=\'#2db25d\'>CHUYẾN ĐI</b></font>
+        ]]>
+    </string>
+    <string name="txt_toolbar_notification" formatted="false">
+        <![CDATA[
+        <b>THÔNG <font color=\'#2db25d\'>BÁO</b></font>
+        ]]>
+    </string>
+    <string name="txt_toolbar_discount" formatted="false">
+        <![CDATA[
+        <b>NHẬP MÃ <font color=\'#2db25d\'>KHUYẾN MẠI</b></font>
+        ]]>
+    </string>
+    <string name="txt_toolbar_aboutus" formatted="false">
+        <![CDATA[
+        <b>VỀ <font color=\'#2db25d\'>CHÚNG TÔI</b></font>
+        ]]>
+    </string>
+    <string name="txt_privacy" formatted="false">
+        <![CDATA[
+        <b><font color=\'#e76363\'>QUYỀN RIÊNG TƯ</b></font>
+        ]]>
+    </string>
+    <string name="txt_term" formatted="false">
+        <![CDATA[
+        <b><font color=\'#2db25d\'>ĐIỀU KHOẢN VÀ ĐIỀU KIỆN</b></font>
+        ]]>
+    </string>
+    <string name="txt_toolbar_setting" formatted="false">
+        <![CDATA[
+      <b>CÀI <font color=\'#2db25d\'>ĐẶT</b></font>
+        ]]>
+    </string>
+    <string name="dang_doi" formatted="false">
+        <![CDATA[
+      Đang đợi <font color=\'#304A70\'>%s</b></font> trả lời
+        ]]>
+    </string>
+    <string name="txt_bike" formatted="false">
+        <![CDATA[
+        <font color=\'#000000\'><b>Honda</font> <font color=\'#e76363\'>CB400</b></font>
+        ]]>
+    </string>
+    <string name="loadding">Đang xử lý...</string>
+    <string name="txt_duration" formatted="false">
+        <![CDATA[
+        %s <b>%s</b>
+        ]]>
+    </string>
+
+    <string name="unknow_error">Đã có lỗi xảy ra. Vui lòng thử lại sau!</string>
+
+    <string name="unknow_error_code">Đã có lỗi xảy ra. Vui lòng thử lại sau!\n[%s]</string>
+    <string name="missing_data">Missing data</string>
+    <string name="pass_incorrectly">Password too short, enter minimum 6 characters!</string>
+    <string name="auth_failt">Your username or password is incorrect. please try again!</string>
+    <string name="emaill_incorrectly">Email is incorrect. Please try again!</string>
+    <string name="emaill_exist">Email này không tồn tại!</string>
+    <string name="please_enter_email">"Email sai định dạng! "</string>
+    <string name="enter_pass">"Vui lòng nhập password! "</string>
+    <string name="please_enter_fname">Vui lòng nhập họ tên!</string>
+    <string name="please_enter_lname">Vui lòng nhập tên!</string>
+    <string name="please_enter_email_2">Vui lòng nhập email!</string>
+    <string name="empty_phone">Vui lòng nhập số điện thoại!</string>
+    <string name="please_enter_birth">Please enter your birthday!</string>
+    <string name="please_enter_phone">Số điện thoại sai định dạng</string>
+    <string name="repassword">Repeat Paswword</string>
+    <string name="repass_incorrectly">Your passwords do not match</string>
+    <string name="login">Login</string>
+    <string name="lbl_forgot_password">Forgot password</string>
+    <string name="forgot_password_msg">Hệ thống đã gửi lại mật khẩu qua email bạn đã đăng ký!.</string>
+    <string name="dismis">OK</string>
+    <string name="error">Thông báo</string>
+    <string name="fb_id">805514846270648</string>
+    <string name="api_key_gplus">1026901072455-8t3u10vuccq42vl3v8fi3jnusrpld2j2.apps.googleusercontent.com</string>
+    <string name="phone_exist">Số điện thoại đã được đăng ký!</string>
+    <string name="error_promotion">Mã khuyến mại không tồn tại!</string>
+    <string name="txt_promotion_valid">Được giảm giá</string>
+    <string name="disconnect">Mất kết nối</string>
+    <string name="reconnect">Đang kết nối</string>
+    <string name="connected">Đã kết nối</string>
+    <string name="t_i_xe_ang_n_trong_00_00">Tài xế đang đến trong %s</string>
+    <string name="title_activity_execute_booking">ExecuteBookingActivity</string>
+    <string name="c_n_l_i_200_k_t">Còn lại %d ký tự</string>
+    <string name="incorrect_name">Họ tên không được chứa các ký tự đặc biệt và chữ số</string>
+    <string name="title_activity_test_map">Map</string>
+    <string name="ph_n_h_i_g_p">Phản hồi &amp; góp ý</string>
+
+
+    <array name="danhgia">
+        <item>Vui tính</item>
+        <item>Tác phong tốt</item>
+        <item>Đi đúng luật</item>
+    </array>
+    <string name="title_activity_detail_discount">DetailDiscountActivity</string>
+    <string name="large_text">
+        "Material is the metaphor.\n\n"
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic.\n"
+        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+        "world, without breaking the rules of physics.\n"
+        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
+        "interact, and exist in space and in relation to each other. Realistic lighting shows "
+        "seams, divides space, and indicates moving parts.\n\n"
+
+        "Bold, graphic, intentional.\n\n"
+
+        "The foundational elements of print based design typography, grids, space, scale, color, "
+        "and use of imagery guide visual treatments. These elements do far more than please the "
+        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
+        "imagery, large scale typography, and intentional white space create a bold and graphic "
+        "interface that immerse the user in the experience.\n"
+        "An emphasis on user actions makes core functionality immediately apparent and provides "
+        "waypoints for the user.\n\n"
+
+        "Motion provides meaning.\n\n"
+
+        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
+        "inflection points that initiate motion, transforming the whole design.\n"
+        "All action takes place in a single environment. Objects are presented to the user without "
+        "breaking the continuity of experience even as they transform and reorganize.\n"
+        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
+        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
+
+        "3D world.\n\n"
+
+        "The material environment is a 3D space, which means all objects have x, y, and z "
+        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
+        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
+        "position along the z-axis and has a standard 1dp thickness.\n"
+        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
+        "emulated by manipulating the y-axis.\n\n"
+
+        "Light and shadow.\n\n"
+
+        "Within the material environment, virtual lights illuminate the scene. Key lights create "
+        "directional shadows, while ambient light creates soft shadows from all angles.\n"
+        "Shadows in the material environment are cast by these two light sources. In Android "
+        "development, shadows occur when light sources are blocked by sheets of material at "
+        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
+        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
+
+        "Resting elevation.\n\n"
+
+        "All material objects, regardless of size, have a resting elevation, or default elevation "
+        "that does not change. If an object changes elevation, it should return to its resting "
+        "elevation as soon as possible.\n\n"
+
+        "Component elevations.\n\n"
+
+        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
+        "does not vary from 6dp in one app to 16dp in another app).\n"
+        "Components may have different resting elevations across platforms, depending on the depth "
+        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
+
+        "Responsive elevation and dynamic elevation offsets.\n\n"
+
+        "Some component types have responsive elevation, meaning they change elevation in response "
+        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
+        "changes are consistently implemented using dynamic elevation offsets.\n"
+        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
+        "to the component’s resting state. They ensure that elevation changes are consistent "
+        "across actions and component types. For example, all components that lift on press have "
+        "the same elevation change relative to their resting elevation.\n"
+        "Once the input event is completed or cancelled, the component will return to its resting "
+        "elevation.\n\n"
+
+        "Avoiding elevation interference.\n\n"
+
+        "Components with responsive elevations may encounter other components as they move between "
+        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
+        "through other material, components avoid interfering with one another any number of ways, "
+        "whether on a per component basis or using the entire app layout.\n"
+        "On a component level, components can move or be removed before they cause interference. "
+        "For example, a floating action button (FAB) can disappear or move off screen before a "
+        "user picks up a card, or it can move if a snackbar appears.\n"
+        "On the layout level, design your app layout to minimize opportunities for interference. "
+        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
+        "when a user tries to pick up one of cards.\n\n"
+    </string>
+    <string name="title_activity_tab">TabActivity</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="food">restaurant</string>
+    <string name="shop">shopping_mall</string>
+    <string name="bus">bus_station</string>
+    <string name="title_activity_scrolling">ScrollingActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="xem_chi_tiet">Xem chi tiết</string>
+    <string name="thulai">Thu lại</string>
+</resources>
+

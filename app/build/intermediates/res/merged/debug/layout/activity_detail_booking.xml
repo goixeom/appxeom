@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <ImageView
+        android:id="@+id/img_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:padding="16dp"
+        app:srcCompat="@drawable/ic_back_button" />
+
+    <goixeom.com.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:text="Chi tiết chuyến đi"
+        android:textColor="@color/color_pin"
+        android:textSize="30sp" />
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:orientation="vertical"
+        app:carbon_elevation="5dp"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:id="@+id/ll_root"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="20dp">
+
+                    <ImageView
+                        style="@style/img_dot_add_from"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_local_pink" />
+
+                    <goixeom.com.CustomTextView
+                        android:id="@+id/tv_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <goixeom.com.CustomTextView
+                        android:id="@+id/tv_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="2dp"
+                        android:paddingLeft="1dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_size_time_detail_booking" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/ic_rectangle_rated"
+                    android:tint="@color/colorAccent">
+
+                    <goixeom.com.CustomTextView
+                        android:id="@+id/tv_rate"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="4★"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingRight="20dp"
+                android:paddingTop="0dp">
+
+                <LinearLayout
+                    android:id="@+id/ll_from"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+
+                    android:paddingLeft="20dp">
+
+                    <ImageView
+                        style="@style/img_dot_add_from"
+                        app:srcCompat="@drawable/ic_local_pink" />
+
+                    <LinearLayout style="@style/layout_add_from">
+
+                        <goixeom.com.CustomTextView
+                            android:id="@+id/tv_from"
+                            style="@style/text_add_from"
+                            android:textSize="@dimen/size_text_normal_detail_booking" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_from"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical|left"
+                    android:paddingBottom="5dp"
+
+                    android:paddingLeft="@dimen/size_padding_pin_des">
+
+                    <ImageView
+                        style="@style/pin_add_des"
+                        app:srcCompat="@drawable/ic_pin_black_200" />
+
+                    <LinearLayout style="@style/layout_add_des">
+
+                        <goixeom.com.CustomTextView
+                            android:id="@+id/tv_des"
+                            style="@style/text_add_des"
+                            android:gravity="center_vertical"
+                            android:textSize="@dimen/size_text_normal_detail_booking" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <goixeom.com.CustomTextView
+                android:id="@+id/tv_go_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/background_txt"
+                android:paddingBottom="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp"
+                android:text="5.6 Km"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/discount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:visibility="visible"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:paddingLeft="16dp">
+
+                <goixeom.com.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mã khuyến mãi"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/size_text_normal_detail_booking" />
+
+                <goixeom.com.CustomTextView
+                    android:id="@+id/tv_discount_booking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/bg_border_text_blue"
+                    android:gravity="center"
+                    android:paddingBottom="4dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="4dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_big_detail_booking" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <goixeom.com.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Thanh toán tiền mặt"
+                        android:textSize="@dimen/size_text_normal_detail_booking" />
+
+                    <goixeom.com.CustomTextView
+                        android:id="@+id/tv_total"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/text_size_big_detail_booking"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <View
+                    style="@style/divHorizontal"
+                    android:background="@color/gray" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <goixeom.com.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Mã số chuyến đi"
+                        android:textSize="@dimen/size_text_normal_detail_booking" />
+
+                    <goixeom.com.CustomTextView
+                        android:id="@+id/tv_id_booking"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:textColor="@color/pink_red"
+                        android:textSize="@dimen/text_size_big_detail_booking"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <include layout="@layout/layout_driver_detail_booking" />
+
+            <ImageView
+                android:id="@+id/img_call"
+                android:layout_width="@dimen/size_help"
+                android:layout_height="@dimen/size_help"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:src="@drawable/selector_call" />
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</ScrollView>
+
+
+</LinearLayout>

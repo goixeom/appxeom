@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <include layout="@layout/toolbar_back" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:id="@+id/loading"
+            style="@style/loading"
+            android:layout_centerHorizontal="true" />
+        <ImageView
+            android:id="@+id/img_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:layout_margin="80dp"
+            app:srcCompat="@drawable/ic_no_coupon" />
+
+        <com.lhh.ptrrv.library.PullToRefreshRecyclerView
+            android:id="@+id/rcv_promotion"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:visibility="visible"></com.lhh.ptrrv.library.PullToRefreshRecyclerView>
+
+    </FrameLayout>
+
+
+
+</LinearLayout>
