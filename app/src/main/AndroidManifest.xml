@@ -15,7 +15,8 @@
     <uses-permission android:name="android.permission.WRITE_SMS" />
     <uses-permission android:name="android.permission.READ_SMS" />
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
-
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <application
         android:name=".MainApplication"
         android:allowBackup="false"
@@ -40,11 +41,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="adjustResize">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".activities.SearchLocationActivity"
@@ -162,20 +159,27 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".activities.InputCodeActivity"
-            android:label="Nhập mã khuyến mại" />
+            android:label="Nhập mã khuyến mại"  android:screenOrientation="portrait" />
         <activity
             android:name=".activities.TabActivity"
             android:label="@string/title_activity_tab"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"  android:screenOrientation="portrait" />
         <activity
             android:name=".activities.ScrollingActivity"
             android:label="@string/title_activity_scrolling"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"   android:screenOrientation="portrait"/>
         <activity
             android:name=".activities.DetailNotificationActivity"
-            android:label="Chi tiết thông báo" />
+            android:label="Chi tiết thông báo"   android:screenOrientation="portrait"/>
         <activity android:name=".activities.DetailNewsActivity"
-            android:label="Chi tiết tin tức"></activity>
+            android:label="Chi tiết tin tức"  android:screenOrientation="portrait"></activity>
+        <activity android:name=".activities.SplashScreenActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

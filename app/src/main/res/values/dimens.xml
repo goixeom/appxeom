@@ -108,5 +108,9 @@
     <dimen name="size_padding_top_discount">14dp</dimen>
     <dimen name="size_rate_margin_rate_vote">4dp</dimen>
     <dimen name="size_text_margin_txt_countdown">20dp</dimen>
+    <dimen name="size_w_car">22dp</dimen>
+    <dimen name="size_h_car">40dp</dimen>
+    <dimen name="size_w_bike">28dp</dimen>
+    <dimen name="size_h_bike">38dp</dimen>
 
 </resources>

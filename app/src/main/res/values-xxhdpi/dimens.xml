@@ -40,15 +40,16 @@
     <dimen name="text_number_dialog">21sp</dimen>
     <dimen name="text_add_dialog">16sp</dimen>
     <dimen name="size_ok_dialog">48dp</dimen>
-    <dimen name="size_login_text_login">12sp</dimen>
+    <dimen name="size_login_text_login">11sp</dimen>
 
     <dimen name="size_vote_icon">60dp</dimen>
     <dimen name="size_w_dialog">130dp</dimen>
     <dimen name="size_h_dialog">36dp</dimen>
-    <dimen name="margin_left_dialog_booking">-370px</dimen>
+    <dimen name="margin_left_dialog_booking">-420px</dimen>
     <dimen name="margin_left_420_dialog_booking">-370px</dimen>
-    <dimen name="margin_top_dialog_booking">-150px</dimen>
-    <dimen name="margin_right_dialog_booking">500px</dimen>
+    <dimen name="margin_top_dialog_booking">-200px</dimen>
+    <dimen name="margin_right_dialog_booking">520px</dimen>
+    <dimen name="margin_left_right_dialog_booking">50px</dimen>
     <dimen name="margin_bottom_dialog_booking">20px</dimen>
     <dimen name="size_dialog_margin_bottom">8dp</dimen>
     <dimen name="size_pin_map_booking">20dp</dimen>
@@ -57,8 +58,8 @@
     <dimen name="size_margin_top_detail_discount">60dp</dimen>
     <dimen name="size_text_normal_detail_booking">14sp</dimen>
     <dimen name="margin_right_fab_detail_discount">28dp</dimen>
-    <dimen name="margin_bottom_fab_detail_discount">140dp</dimen>
-    <dimen name="size_margin_bt_fab_inputcode">135dp</dimen>
+    <dimen name="margin_bottom_fab_detail_discount">45dp</dimen>
+    <dimen name="size_margin_bt_fab_inputcode">75dp</dimen>
     <dimen name="size_dot_dialog_booking">14dp</dimen>
     <dimen name="margin_layout_dialog_booking">40dp</dimen>
     <dimen name="margin_add_dialog_booking">10dp</dimen>

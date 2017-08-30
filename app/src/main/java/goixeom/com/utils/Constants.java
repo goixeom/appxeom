@@ -60,6 +60,8 @@ public class Constants {
     public static final int RESULT_CHANGE_TYPE_VEHICLE = 6000;
     public static final java.lang.String POSITION = "position";
     public static final String TYPE_ADDRESS = "type_address";
+    public static final String DIRECTION = "config_direction" ;
+    public static final String TIME_UPDATE = "time_update";
 
 
     public static int POS_LOGIN = 0;

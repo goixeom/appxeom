@@ -28,9 +28,9 @@
     <dimen name="size_marker_w">100dp</dimen>
     <dimen name="size_dialog_driver_trip">18sp</dimen>
     <dimen name="margin_empty">30dp</dimen>
-    <dimen name="size_img_avt_dialog">80dp</dimen>
+    <dimen name="size_img_avt_dialog">70dp</dimen>
     <dimen name="size_text_rate_dialog">24dp</dimen>
-    <dimen name="text_price_dialog">24sp</dimen>
+    <dimen name="text_price_dialog">22sp</dimen>
     <dimen name="text_km_dialog">16sp</dimen>
     <dimen name="h_ic_dialog">24dp</dimen>
     <dimen name="w_dialog">18dp</dimen>
@@ -52,10 +52,10 @@
     <dimen name="size_h_dialog">30dp</dimen>
     <dimen name="size_h_compare_booking">210px</dimen>
     <dimen name="margin_left_dialog_booking">-200px</dimen>
-    <dimen name="margin_top_dialog_booking">-70px</dimen>
-    <dimen name="margin_right_dialog_booking">150px</dimen>
+    <dimen name="margin_top_dialog_booking">-80px</dimen>
+    <dimen name="margin_right_dialog_booking">160px</dimen>
     <dimen name="margin_bottom_dialog_booking">10px</dimen>
-    <dimen name="margin_left_right_dialog_booking">10px</dimen>
+    <dimen name="margin_left_right_dialog_booking">20px</dimen>
     <dimen name="size_dot">14dp</dimen>
     <dimen name="size_margin_top_detail_discount">60dp</dimen>
     <dimen name="size_text_normal_detail_booking">14sp</dimen>
@@ -72,7 +72,7 @@
     <dimen name="margin_top_dot_detail_discount">2dp</dimen>
     <dimen name="size_margin_dialog_content">8dp</dimen>
     <dimen name="size_text_dimen_dialog_booking_medium">12sp</dimen>
-    <dimen name="size_img_h_avt_dialog">100dp</dimen>
+    <dimen name="size_img_h_avt_dialog">90dp</dimen>
     <dimen name="size_text_dimen_dialog_booking_small">10sp</dimen>
     <dimen name="size_dot_dialog_booking">12dp</dimen>
     <dimen name="margin_layout_dialog_booking">24dp</dimen>
@@ -88,6 +88,6 @@
     <dimen name="margin_bottom_fab_detail_discount">10dp</dimen>
     <dimen name="size_padding_discount">10dp</dimen>
     <dimen name="size_padding_top_discount">8dp</dimen>
-    <dimen name="size_text_margin_txt_countdown">20dp</dimen>
+    <dimen name="size_text_margin_txt_countdown">12dp</dimen>
 
 </resources>

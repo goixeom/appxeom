@@ -12,6 +12,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.location.Address;
 import android.location.Geocoder;
@@ -41,6 +42,7 @@ import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import java.io.File;
 import java.util.List;
 import java.util.Locale;
 
@@ -262,11 +264,14 @@ public class CommonUtils {
 
     public static Marker addMarker(Drawable resource, GoogleMap mMap, LatLng latLng, float rotate, String title) {
         BitmapDescriptor markerIcon = getMarkerIconFromDrawable(resource);
-
         Marker marker = mMap.addMarker(new MarkerOptions().position(latLng).anchor(0.5f, 0.5f).rotation(rotate).icon(markerIcon));
         return marker;
     }
-
+    public static Marker addMarkerFromFile(File resource, GoogleMap mMap, LatLng latLng,float rotate,String tile) {
+        Marker marker = mMap.addMarker(new MarkerOptions().position(latLng).anchor(0.5f, 0.5f).rotation(rotate).icon(BitmapDescriptorFactory.fromBitmap(Bitmap.createScaledBitmap(BitmapFactory.decodeFile(resource.getPath()), 90, 90, false))));
+        marker.showInfoWindow();
+        return marker;
+    }
     public static BitmapDescriptor getMarkerIconFromDrawable(Drawable drawable) {
         Canvas canvas = new Canvas();
         Bitmap bitmap = Bitmap.createBitmap(drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight(), Bitmap.Config.ARGB_8888);
@@ -276,7 +281,16 @@ public class CommonUtils {
         return BitmapDescriptorFactory.fromBitmap(bitmap);
     }
 
-
+        public static Drawable resize(Drawable image,Context context) {
+            Bitmap b = ((BitmapDrawable)image).getBitmap();
+            Bitmap bitmapResized = Bitmap.createScaledBitmap(b, (int) context.getResources().getDimension(R.dimen.size_w_bike), (int) context.getResources().getDimension(R.dimen.size_h_bike), false);
+            return new BitmapDrawable(context.getResources(), bitmapResized);
+        }
+        public static Drawable resizeCar(Drawable image,Context context) {
+            Bitmap b = ((BitmapDrawable)image).getBitmap();
+            Bitmap bitmapResized = Bitmap.createScaledBitmap(b,(int) context.getResources().getDimension(R.dimen.size_w_car), (int) context.getResources().getDimension(R.dimen.size_h_car), false);
+            return new BitmapDrawable(context.getResources(), bitmapResized);
+        }
     public static Notification createNotificationWithMsg(Context context, String title, String msg, int isNomalNoti) {
         android.support.v7.app.NotificationCompat.Builder builder = new android.support.v7.app.NotificationCompat.Builder(context);
         builder.setSmallIcon(R.mipmap.ic_launcher);

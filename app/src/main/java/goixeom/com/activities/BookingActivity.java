@@ -13,7 +13,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.IdRes;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.AppCompatDrawableManager;
 import android.text.Html;
 import android.util.Log;
@@ -83,6 +82,7 @@ import goixeom.com.models.Price;
 import goixeom.com.socket.LocationBearing;
 import goixeom.com.utils.CommonUtils;
 import goixeom.com.utils.Constants;
+import goixeom.com.utils.FileUtils;
 import retrofit2.Call;
 
 public class BookingActivity extends BaseActivity implements OnMapReadyCallback {
@@ -303,9 +303,9 @@ public class BookingActivity extends BaseActivity implements OnMapReadyCallback 
 //                        .position(latLng)
 //                        .icon(BitmapDescriptorFactory.fromBitmap(createFromMarker(address, time))));
                 if (Build.VERSION.SDK_INT >= 20) {
-                    markerfrom = CommonUtils.addMarker(getResources().getDrawable(R.drawable.ic_pin, null), mMap, latLng);
+                    markerfrom = CommonUtils.addMarker(getResources().getDrawable(R.drawable.ic_here_pin, null), mMap, latLng);
                 } else {
-                    markerfrom = CommonUtils.addMarker(AppCompatDrawableManager.get().getDrawable(getApplicationContext(), R.drawable.ic_pin), mMap, latLng);
+                    markerfrom = CommonUtils.addMarker(AppCompatDrawableManager.get().getDrawable(getApplicationContext(), R.drawable.ic_here_pin), mMap, latLng);
                 }
         } else {
             if (markerDes != null)
@@ -316,10 +316,10 @@ public class BookingActivity extends BaseActivity implements OnMapReadyCallback 
 //                        .position(latLng)
 //                        .icon(BitmapDescriptorFactory.fromBitmap(createDrawableFromViewAddressDes(address, time))));
                 if (Build.VERSION.SDK_INT >= 20) {
-                    markerDes = CommonUtils.addMarker(getResources().getDrawable(R.drawable.ic_pin_green, null), mMap, latLng);
+                    markerDes = CommonUtils.addMarker(getResources().getDrawable(R.drawable.ic_shape, null), mMap, latLng);
 
                 } else {
-                    markerDes = CommonUtils.addMarker(AppCompatDrawableManager.get().getDrawable(getApplicationContext(), R.drawable.ic_pin_green), mMap, latLng);
+                    markerDes = CommonUtils.addMarker(AppCompatDrawableManager.get().getDrawable(getApplicationContext(), R.drawable.ic_shape), mMap, latLng);
                 }
         }
     }
@@ -527,6 +527,12 @@ public class BookingActivity extends BaseActivity implements OnMapReadyCallback 
 
     }
 
+    @Override
+    public void onBackPressed() {
+        setResult(Constants.RESULT_CHANGE_TYPE_VEHICLE);
+        super.onBackPressed();
+    }
+
     @OnClick({R.id.ll_promotion_booking, R.id.img_close, R.id.call, R.id.img_back})
     public void onViewClicked(View view) {
         switch (view.getId()) {
@@ -659,6 +665,14 @@ public class BookingActivity extends BaseActivity implements OnMapReadyCallback 
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
         if (mMap != null) {
+            pathName = FileUtils.getFolder(BookingActivity.this) + getString(R.string.bike);
+            dBike = Drawable.createFromPath(pathName);
+            dBike = CommonUtils.resize(dBike, this);
+            pathName = FileUtils.getFolder(BookingActivity.this) + getString(R.string.car);
+            dCar = Drawable.createFromPath(pathName);
+            dCar = CommonUtils.resizeCar(dCar, this);
+
+
             mMap.getUiSettings().setRotateGesturesEnabled(false);
             MapStyleOptions style = MapStyleOptions.loadRawResourceStyle(this, R.raw.style_json);
             mMap.setMapStyle(style);
@@ -741,7 +755,7 @@ public class BookingActivity extends BaseActivity implements OnMapReadyCallback 
                                     if (latLngFrom != null)
                                         getDriverNearby(latLngFrom);
                                 }
-                            }, 0, Constants.TIME_GET_DRIVER);
+                            }, 0, getmSetting().getLong(Constants.TIME_UPDATE,Constants.TIME_GET_DRIVER));
                         }
                     }
                 });
@@ -955,8 +969,10 @@ public class BookingActivity extends BaseActivity implements OnMapReadyCallback 
                 call.setEnabled(true);
             PolylineOptions optionsBackground = new PolylineOptions().add().width(10);
             if (lineOptions == null) return;
-            lines = mMap.addPolyline(lineOptions);
-            startAnim(points, lines);
+//            if(getmSetting().getBoolean(Constants.DIRECTION,true)){
+                lines = mMap.addPolyline(lineOptions);
+                startAnim(points, lines);
+//            }
             final ArrayList<LatLng> finalPoints = points;
             handler.postDelayed(new Runnable() {
                 @Override
@@ -966,7 +982,9 @@ public class BookingActivity extends BaseActivity implements OnMapReadyCallback 
             }, 500);
         }
     }
-
+    String pathName;
+    Drawable dBike;
+    Drawable dCar;
     private void getDriverNearby(LatLng location) {
         if (!NetworkUtils.isConnected()) return;
         int type = getmSetting().getInt(Constants.TYPE_VEHICLE, 0);
@@ -1001,17 +1019,21 @@ public class BookingActivity extends BaseActivity implements OnMapReadyCallback 
                             Marker marker;
                             Drawable drawable = null;
                             if (typeVehicle == 0) {
-                                if (Build.VERSION.SDK_INT >= 20) {
-                                    drawable = ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_motorcycle);
-                                } else {
-                                    drawable = AppCompatDrawableManager.get().getDrawable(getApplicationContext(), R.drawable.ic_motorcycle);
-                                }
+//                                if (Build.VERSION.SDK_INT >= 20) {
+//                                    drawable = ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_motorcycle);
+//                                } else {
+//                                    drawable = AppCompatDrawableManager.get().getDrawable(getApplicationContext(), R.drawable.ic_motorcycle);
+//                                }
+                                drawable =  dBike;
+
                             } else {
-                                if (Build.VERSION.SDK_INT >= 20) {
-                                    drawable = ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_car_view_icon);
-                                } else {
-                                    drawable = AppCompatDrawableManager.get().getDrawable(getApplicationContext(), R.drawable.ic_car_view_icon);
-                                }
+//                                if (Build.VERSION.SDK_INT >= 20) {
+//                                    drawable = ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_car_view_icon);
+//                                } else {
+//                                    drawable = AppCompatDrawableManager.get().getDrawable(getApplicationContext(), R.drawable.ic_car_view_icon);
+//                                }
+
+                                drawable =  dCar;
                             }
                             marker = CommonUtils.addMarker(drawable, mMap, newLatlng, rand.nextInt(360) + 1, locationBearing.getD_id() + "");
                             locationBearing.setMarker(marker);

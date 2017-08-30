@@ -3,6 +3,7 @@ package goixeom.com.apis;
 
 import java.util.List;
 
+import goixeom.com.models.AppConfig;
 import goixeom.com.models.BookingTrip;
 import goixeom.com.models.Discount;
 import goixeom.com.models.History;
@@ -23,6 +24,8 @@ import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
+import retrofit2.http.Streaming;
+import retrofit2.http.Url;
 
 /**
  * Created by MyPC on 9/12/2016.
@@ -33,8 +36,10 @@ public interface GoiXeOmAPI {
 
     @GET(ApiConstants.API_INFOR_APP)
     Call<ApiResponse<String>> getInfoApp(@Query("key") String key);
+
     @GET(ApiConstants.API_NOTIFICATION)
     Call<ApiResponse<List<NotificationData>>> getListNotification(@Query("key") String key, @Query("id") String id);
+
     @FormUrlEncoded
     @POST(ApiConstants.API_UPDATE_PROFILE)
     Call<ApiResponse<String>> updateInformation(@Field("key") String key, @Field("phone") String phone
@@ -83,7 +88,8 @@ public interface GoiXeOmAPI {
     Call<ApiResponse<User>> getInfor(@Query("key") String key, @Query("id") String id);
 
     @GET(ApiConstants.API_GET_PROMOTIONS_TYPE)
-    Call<ApiResponse<List<Discount>>> getPromotions(@Query("key") String key, @Query("id") String id,@Query("type") int type);
+    Call<ApiResponse<List<Discount>>> getPromotions(@Query("key") String key, @Query("id") String id, @Query("type") int type);
+
     @GET(ApiConstants.API_GET_PROMOTIONS)
     Call<ApiResponse<List<Discount>>> getPromotions(@Query("key") String key, @Query("id") String id);
 
@@ -94,7 +100,7 @@ public interface GoiXeOmAPI {
     Call<ApiResponse<Price>> getDistanceCost(@Query("key") String key, @Query("distance") double distance);
 
     @GET(ApiConstants.API_GET_DRIVER)
-    Call<ApiResponse<List<LocationBearing>>> getDriver(@Query("key") String key, @Query("lat") double lat, @Query("lng") double lng,@Query("type") int type);
+    Call<ApiResponse<List<LocationBearing>>> getDriver(@Query("key") String key, @Query("lat") double lat, @Query("lng") double lng, @Query("type") int type);
 
     @FormUrlEncoded
     @POST(ApiConstants.API_CREATE_BOOKING)
@@ -105,7 +111,7 @@ public interface GoiXeOmAPI {
             , @Field("price") int price
             , @Field("id_code") int id_code
             , @Field("distance") double distance
-                , @Field("duration") String duration
+            , @Field("duration") String duration
             , @Field("lat_from") double latFrom
             , @Field("lng_from") double lngFrom
             , @Field("lat_to") double latTo
@@ -127,15 +133,17 @@ public interface GoiXeOmAPI {
     @POST(ApiConstants.API_RATE_DRIVER)
     Call<ApiResponse> rateDriver(@Field("key") String key
             , @Field("t_id") int idTrip, @Field("rate") int rate);
+
     @FormUrlEncoded
     @POST(ApiConstants.API_VOTE_DRIVER)
     Call<ApiResponse> voteDriver(@Field("key") String key
-            , @Field("t_id") int idTrip, @Field("vote") int vote,@Field("rate") int rate);
+            , @Field("t_id") int idTrip, @Field("vote") int vote, @Field("rate") int rate);
 
     @FormUrlEncoded
     @POST(ApiConstants.API_ADD_TO_FAVOURITE)
     Call<ApiResponse> addAddressToFavourite(@Field("key") String key
-            , @Field("id") String idUser, @Field("name") String name,@Field("address") String address,@Field("type") String type,@Field("lat") double lat,@Field("lng") double lng);
+            , @Field("id") String idUser, @Field("name") String name, @Field("address") String address, @Field("type") String type, @Field("lat") double lat, @Field("lng") double lng);
+
     @FormUrlEncoded
     @POST(ApiConstants.API_CLEAR_TO_FAVOURITE)
     Call<ApiResponse> clearToFavourite(@Field("key") String key
@@ -153,7 +161,7 @@ public interface GoiXeOmAPI {
     Call<ApiResponse<List<PlaceNearby>>> getNearby(
             @Query("location") String location
             , @Query("radius") int radius
-            , @Query("type") String  type
+            , @Query("type") String type
             , @Query("limit") int limit
             , @Query("key") String key);
 
@@ -174,20 +182,32 @@ public interface GoiXeOmAPI {
     Call<ApiResponse<TripInforModel>> getDetailBooking(@Query("key") String key
             , @Query("t_id") int idTrip
             , @Query("d_id") int idDriver);
+
     @GET(ApiConstants.API_GET_DETAIL_BOOKING)
     Call<ApiResponse<TripInforModel>> getDetailBooking(@Query("key") String key
             , @Query("t_id") int idTrip
-           );
+    );
+
     @GET(ApiConstants.API_CONFIG)
     Call<ApiResponse<Integer>> getConfig(@Query("key") String key
     );
+    @GET(ApiConstants.API_CONFIG_APP)
+    Call<ApiResponse<AppConfig>> getAppConfig(@Query("key") String key
+    );
+
     @GET(ApiConstants.API_RECENTLY)
-    Call<ApiResponse<List<MyPlace>>> getListRecently(@Query("key") String key,@Query("id") String idUser
+    Call<ApiResponse<List<MyPlace>>> getListRecently(@Query("key") String key, @Query("id") String idUser
     );
+
     @GET(ApiConstants.API_GET_FAV_ADDRESS)
-    Call<ApiResponse<List<MyPlace>>> getListFavourite(@Query("key") String key,@Query("id") String idUser
+    Call<ApiResponse<List<MyPlace>>> getListFavourite(@Query("key") String key, @Query("id") String idUser
     );
+
     @GET(ApiConstants.API_GET_NEWS)
     Call<ApiResponse<List<News>>> getNews(@Query("key") String key
     );
+
+    @Streaming
+    @GET
+    Call<okhttp3.ResponseBody> downloadFileWithDynamicUrlAsync(@Url String fileUrl);
 }

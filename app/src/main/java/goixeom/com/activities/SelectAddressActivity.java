@@ -5,11 +5,8 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.widget.AppCompatDrawableManager;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -46,6 +43,7 @@ import goixeom.com.models.MyPlace;
 import goixeom.com.socket.LocationBearing;
 import goixeom.com.utils.CommonUtils;
 import goixeom.com.utils.Constants;
+import goixeom.com.utils.FileUtils;
 import retrofit2.Call;
 
 public class SelectAddressActivity extends BaseActivity implements OnMapReadyCallback, Runnable {
@@ -72,7 +70,9 @@ public class SelectAddressActivity extends BaseActivity implements OnMapReadyCal
     @BindView(R.id.ll_root)
     FrameLayout llRoot;
     private Timer timerTask = new Timer();
-
+    String pathName;
+    Drawable dBike;
+    Drawable dCar;
 
     @Override
     public void pingNotification(String title, String content) {
@@ -112,9 +112,14 @@ public class SelectAddressActivity extends BaseActivity implements OnMapReadyCal
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
         if (mMap != null) {
+            pathName = FileUtils.getFolder(SelectAddressActivity.this) + getString(R.string.bike);
+            dBike = Drawable.createFromPath(pathName);
+            dBike = CommonUtils.resize(dBike, this);
+            pathName = FileUtils.getFolder(SelectAddressActivity.this) + getString(R.string.car);
+            dCar = Drawable.createFromPath(pathName);
+            dCar = CommonUtils.resizeCar(dCar, this);
             if (latLng != null) {
                 CommonUtils.focusCurrentLocation(latLng, Constants.ZOOM, mMap);
-
             }
             mMap.getUiSettings().setRotateGesturesEnabled(false);
             MapStyleOptions style = MapStyleOptions.loadRawResourceStyle(this, R.raw.style_json);
@@ -158,7 +163,7 @@ public class SelectAddressActivity extends BaseActivity implements OnMapReadyCal
                 if (mLatlng != null)
                     getDriverNearby(mLatlng);
             }
-        }, 0, Constants.TIME_GET_DRIVER);
+        }, 0, getmSetting().getLong(Constants.TIME_UPDATE,15000));
     }
 
     @Override
@@ -210,17 +215,20 @@ public class SelectAddressActivity extends BaseActivity implements OnMapReadyCal
                             int typeVehicle  = getmSetting().getInt(Constants.TYPE_VEHICLE,0);
                             Drawable drawable;
                             if(typeVehicle ==0 ){
-                                if (Build.VERSION.SDK_INT >= 20) {
-                                    drawable = ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_motorcycle);
-                                }else{
-                                    drawable = AppCompatDrawableManager.get().getDrawable(getApplicationContext(), R.drawable.ic_motorcycle);
-                                }
+//                                if (Build.VERSION.SDK_INT >= 20) {
+//                                    drawable = ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_motorcycle);
+//                                }else{
+//                                    drawable = AppCompatDrawableManager.get().getDrawable(getApplicationContext(), R.drawable.ic_motorcycle);
+//                                }
+                                drawable = dBike;
                             }else{
-                                if (Build.VERSION.SDK_INT >= 20) {
-                                    drawable = ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_car_view_icon);
-                                }else{
-                                    drawable = AppCompatDrawableManager.get().getDrawable(getApplicationContext(), R.drawable.ic_car_view_icon);
-                                }
+//                                if (Build.VERSION.SDK_INT >= 20) {
+//                                    drawable = ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_car_view_icon);
+//                                }else{
+//                                    drawable = AppCompatDrawableManager.get().getDrawable(getApplicationContext(), R.drawable.ic_car_view_icon);
+//                                }
+                                drawable = dCar;
+
                             }
                             marker = CommonUtils.addMarker(drawable, mMap, newLatlng, (float) locationBearing.getAngle(), locationBearing.getD_id() + "");
                             locationBearing.setMarker(marker);

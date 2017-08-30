@@ -33,6 +33,7 @@ public class ApiConstants {
     public static final String API_DIRECTION="directions/json";
     public static final String API_GET_LOCATION_FROM_ADDRESS="geocode/json";
     public static final String API_CONFIG="get-config.php";
+    public static final String API_CONFIG_APP="config.php";
     public static final String API_KEY="9a887d75fed2ffb7b641dbf85b3bffd9";
     public static final String API_GET_DRIVER="get-driver.php";
     public static final String API_GET_DRIVER_BOOKING="get-driver-booking.php";

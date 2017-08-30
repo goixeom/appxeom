@@ -32,12 +32,12 @@ public class AdapterHistory extends RecyclerView.Adapter<AdapterHistory.ViewHold
         this.context = context;
         this.list = list;
     }
-
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.row_history, parent, false));
-    }
+        LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
+        return new ViewHolder(layoutInflater.inflate(R.layout.row_history,parent,false));
+    }
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         final History discount = list.get(position);

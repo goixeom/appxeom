@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.graphics.Bitmap;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -84,6 +85,7 @@ import goixeom.com.socket.SocketConstants;
 import goixeom.com.socket.SocketResponse;
 import goixeom.com.utils.CommonUtils;
 import goixeom.com.utils.Constants;
+import goixeom.com.utils.FileUtils;
 import retrofit2.Call;
 
 public class ExecuteBookingActivity extends BaseActivity
@@ -239,7 +241,8 @@ public class ExecuteBookingActivity extends BaseActivity
     public boolean needToListenRoom = true;
     private boolean isActivityActived;
     MaterialDialog dialogVote;
-    int resource= R.drawable.ic_motorcycle;
+    //    int resource= R.drawable.ic_motorcycle;
+    String resource;
     private CountDownTimer timerAutoCancel = new CountDownTimer(60000, 1000) {
         @Override
         public void onTick(long l) {
@@ -317,12 +320,15 @@ public class ExecuteBookingActivity extends BaseActivity
                             } else {
                                 locationBearingDes.setLongitude(latLngDes.longitude);
                                 locationBearingDes.setLatitude(latLngDes.latitude);
-                                if (Build.VERSION.SDK_INT >= 20) {
-                                    markerDes = CommonUtils.addMarker(ResourcesCompat.getDrawable(getResources(), resource, null), mMap, latLngDes);
-                                } else {
-                                    markerDes = CommonUtils.addMarker(AppCompatDrawableManager.get().getDrawable(getApplicationContext(), resource), mMap, latLngDes);
-
-                                }
+//                                if (Build.VERSION.SDK_INT >= 20) {
+//                                    markerDes = CommonUtils.addMarker(ResourcesCompat.getDrawable(getResources(), resource, null), mMap, latLngDes);
+//                                } else {
+//                                    markerDes = CommonUtils.addMarker(AppCompatDrawableManager.get().getDrawable(getApplicationContext(), resource), mMap, latLngDes);
+//                                }
+                                //// TODO: 8/29/2017 Change icon from server
+                                Drawable dCar = Drawable.createFromPath(resource);
+                                dCar = CommonUtils.resizeCar(dCar, ExecuteBookingActivity.this);
+                                markerDes = CommonUtils.addMarker(dCar, mMap, latLngDes);
                                 locationBearingDes.setMarker(markerDes);
                                 locationBearingDes.addToStack(latLngDes);
                             }
@@ -370,11 +376,17 @@ public class ExecuteBookingActivity extends BaseActivity
                                 locationBearingDes.setLatitude(latLngDes.latitude);
                                 if (Build.VERSION.SDK_INT >= 20) {
                                     markerFrom = CommonUtils.addMarker(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_local_pink_map, null), mMap, latLngFrom);
-                                    markerDes = CommonUtils.addMarker(ResourcesCompat.getDrawable(getResources(), resource, null), mMap, latLngDes);
+//                                    markerDes = CommonUtils.addMarker(ResourcesCompat.getDrawable(getResources(), resource, null), mMap, latLngDes);
                                 } else {
                                     markerFrom = CommonUtils.addMarker(AppCompatDrawableManager.get().getDrawable(getApplicationContext(), R.drawable.ic_local_pink_map), mMap, latLngFrom);
-                                    markerDes = CommonUtils.addMarker(AppCompatDrawableManager.get().getDrawable(getApplicationContext(), resource), mMap, latLngDes);
+//                                    markerDes = CommonUtils.addMarker(AppCompatDrawableManager.get().getDrawable(getApplicationContext(), resource), mMap, latLngDes);
                                 }
+
+                                //// TODO: 8/29/2017 Change icon from server
+                                Drawable dCar = Drawable.createFromPath(resource);
+                                dCar = CommonUtils.resizeCar(dCar, ExecuteBookingActivity.this);
+                                markerDes = CommonUtils.addMarker(dCar, mMap, latLngDes);
+
                                 locationBearingDes.setMarker(markerDes);
                                 locationBearingDes.addToStack(latLngDes);
                                 showSnackBar("Đang di chuyển");
@@ -393,11 +405,16 @@ public class ExecuteBookingActivity extends BaseActivity
                                     locationBearingDes.setLatitude(latLngDes.latitude);
                                     if (Build.VERSION.SDK_INT >= 20) {
                                         markerFrom = CommonUtils.addMarker(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_local_pink_map, null), mMap, latLngFrom);
-                                        markerDes = CommonUtils.addMarker(ResourcesCompat.getDrawable(getResources(), resource, null), mMap, latLngDes);
+//                                        markerDes = CommonUtils.addMarker(ResourcesCompat.getDrawable(getResources(), resource, null), mMap, latLngDes);
                                     } else {
                                         markerFrom = CommonUtils.addMarker(AppCompatDrawableManager.get().getDrawable(getApplicationContext(), R.drawable.ic_local_pink_map), mMap, latLngFrom);
-                                        markerDes = CommonUtils.addMarker(AppCompatDrawableManager.get().getDrawable(getApplicationContext(), resource), mMap, latLngDes);
+//                                        markerDes = CommonUtils.addMarker(AppCompatDrawableManager.get().getDrawable(getApplicationContext(), resource), mMap, latLngDes);
                                     }
+                                    //// TODO: 8/29/2017 Change icon from server
+                                    Drawable dCar = Drawable.createFromPath(resource);
+                                    dCar = CommonUtils.resizeCar(dCar, ExecuteBookingActivity.this);
+                                    markerDes = CommonUtils.addMarker(dCar, mMap, latLngDes);
+
                                     locationBearingDes.setMarker(markerDes);
                                     locationBearingDes.addToStack(latLngDes);
                                 }
@@ -622,6 +639,7 @@ public class ExecuteBookingActivity extends BaseActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_execute_booking);
         ButterKnife.bind(this);
+        resource = FileUtils.getFolder(this) + getString(R.string.bike);
 //        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
 //            Window w = getWindow();
 //            w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
@@ -826,11 +844,11 @@ public class ExecuteBookingActivity extends BaseActivity
                 if (object.getData() != null) {
                     mTripInfor = object.getData();
                     timer.onFinish();
-                    if(mTripInfor.getTrip_info()!=null && mTripInfor.getTrip_info().getTypeVichle()!=0){
-                        resource = R.drawable.ic_car_view_icon;
-                        tvNumberSeat.setText(4+"");
-                    }else{
-                        tvNumberSeat.setText(2+"");
+                    if (mTripInfor.getTrip_info() != null && mTripInfor.getTrip_info().getTypeVichle() != 0) {
+                        resource = FileUtils.getFolder(ExecuteBookingActivity.this) + getString(R.string.car);
+                        tvNumberSeat.setText(4 + "");
+                    } else {
+                        tvNumberSeat.setText(2 + "");
 
                     }
 //                    content.setVisibility(View.GONE);
@@ -848,7 +866,7 @@ public class ExecuteBookingActivity extends BaseActivity
                     tvAddFromInfo.setSelected(true);
                     tvAddDesInfo.setText(CommonUtils.getGreateAddressStr(mTripInfor.getTrip_info().getEnd()));
                     tvAddFromInfo.setText(CommonUtils.getGreateAddressStr(mTripInfor.getTrip_info().getStart()));
-                    tvMs.setText(mTripInfor.getTrip_info().getIdTrip()+"");
+                    tvMs.setText(mTripInfor.getTrip_info().getIdTrip() + "");
                     tvBikeRateVote.setText(object.getData().getDriver().getNumber());
                     tvNameDriver.setText(object.getData().getDriver().getName());
                     showSnackBar(object.getData().getDriver().getName() + " đã nhận chuyến");
@@ -1170,7 +1188,7 @@ public class ExecuteBookingActivity extends BaseActivity
                     public void onResponse(ApiResponse<TripInforModel> object) {
                         if (object.getData() != null) {
                             mTripInfor = object.getData();
-                            tvMs.setText(object.getData().getTrip_info().getIdTrip()+"");
+                            tvMs.setText(object.getData().getTrip_info().getIdTrip() + "");
                             addViewReconnection();
                         } else {
                             addViewReconnection();
@@ -1205,12 +1223,14 @@ public class ExecuteBookingActivity extends BaseActivity
         tvAddDesInfo.setText(CommonUtils.getGreateAddressStr(mTripInfor.getTrip_info().getEnd()));
         tvAddFromInfo.setText(CommonUtils.getGreateAddressStr(mTripInfor.getTrip_info().getStart()));
         tvNameDriver.setText(mTripInfor.getDriver().getName());
-        if(mTripInfor.getTrip_info()!=null && mTripInfor.getTrip_info().getTypeVichle()!=0){
-            resource = R.drawable.ic_car_view_icon;
-            tvNumberSeat.setText(4+"");
+        if (mTripInfor.getTrip_info() != null && mTripInfor.getTrip_info().getTypeVichle() != 0) {
+//            resource = R.drawable.ic_car_view_icon;
+            resource = FileUtils.getFolder(this) + getString(R.string.car);
 
-        }else{
-            tvNumberSeat.setText(2+"");
+            tvNumberSeat.setText(4 + "");
+
+        } else {
+            tvNumberSeat.setText(2 + "");
 
         }
         if (mTripInfor.getTrip_info().getStatus() == SocketConstants.STATUS_ONGOING) {

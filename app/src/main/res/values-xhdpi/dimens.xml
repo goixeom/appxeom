@@ -4,8 +4,8 @@
 
     <dimen name="size_w_dialog">125dp</dimen>
     <dimen name="size_h_dialog">35dp</dimen>
-    <dimen name="margin_left_dialog_booking">-300px</dimen>
-    <dimen name="margin_top_dialog_booking">-100px</dimen>
+    <dimen name="margin_left_dialog_booking">-280px</dimen>
+    <dimen name="margin_top_dialog_booking">-140px</dimen>
     <dimen name="margin_right_dialog_booking">450px</dimen>
     <dimen name="margin_bottom_dialog_booking">15px</dimen>
     <dimen name="size_dialog_margin_bottom">8dp</dimen>
@@ -34,7 +34,7 @@
     <dimen name="size_padding_top_discount">14dp</dimen>
     <dimen name="margin_top_dot_detail_discount">4dp</dimen>
     <dimen name="size_rate_margin_rate_vote">6dp</dimen>
-    <dimen name="size_margin_bt_fab_inputcode">65dp</dimen>
+    <dimen name="size_margin_bt_fab_inputcode">55dp</dimen>
     <dimen name="size_text_margin_txt_countdown">20dp</dimen>
 
 </resources>

@@ -22,7 +22,6 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -86,6 +85,7 @@ import goixeom.com.socket.GPSService;
 import goixeom.com.socket.LocationBearing;
 import goixeom.com.utils.CommonUtils;
 import goixeom.com.utils.Constants;
+import goixeom.com.utils.FileUtils;
 import goixeom.com.views.CustomTypefaceSpan;
 import goixeom.com.views.Tooltip;
 import retrofit2.Call;
@@ -134,39 +134,14 @@ public class MapsActivity extends BaseActivity
                 mLatLng = new LatLng(location.getLatitude(), location.getLongitude());
                 if (!isFocused) {
                     if (Build.VERSION.SDK_INT >= 20) {
-                        mMarker = CommonUtils.addMarker(getResources().getDrawable(R.drawable.ic_pin, null), mMap, mLatLng);
+                        mMarker = CommonUtils.addMarker(getResources().getDrawable(R.drawable.ic_here_pin, null), mMap, mLatLng);
                     } else {
-                        mMarker = CommonUtils.addMarker(AppCompatDrawableManager.get().getDrawable(getApplicationContext(), R.drawable.ic_pin), mMap, mLatLng);
+                        mMarker = CommonUtils.addMarker(AppCompatDrawableManager.get().getDrawable(getApplicationContext(), R.drawable.ic_here_pin), mMap, mLatLng);
                     }
                     CommonUtils.focusCurrentLocation(ll, Constants.ZOOM, mMap);
                     isFocused = true;
-//                    mMap.addCircle(new CircleOptions().center(mLatLng).radius(location.getAccuracy()).fillColor(Color.parseColor("#272DB25D")).strokeWidth(0.5f).strokeColor(Color.parseColor("#272DB25D")));
-//                    new Handler().post(new Runnable() {
-//                        @Override
-//                        public void run() {
-//                            if(mapRipple == null ){
-//                                mapRipple = new MapRipple(mMap, mLatLng, MapsActivity.this);
-//                                mapRipple.withNumberOfRipples(3);
-//                                mapRipple.withFillColor(Color.parseColor("#2db25d"));
-//                                mapRipple.withStrokeColor(Color.parseColor("#2db25d"));
-//                                mapRipple.withStrokewidth(5);      // 10dp
-//                                mapRipple.withDistance(1500);      // 2000 metres radius
-//                                mapRipple.withRippleDuration(5000);    //12000ms
-//                                mapRipple.withTransparency(0.8f);
-//                            }else{
-//                                mapRipple.withLatLng(mLatLng);
-//                            }
-//                            runOnUiThread(new Runnable() {
-//                                @Override
-//                                public void run() {
-//                                    mapRipple.startRippleMapAnimation();
-//                                }
-//                            });
-//                        }
-//                    });
                 }
                 getDriverNearby(ll);
-
             }
         }
     };
@@ -193,12 +168,12 @@ public class MapsActivity extends BaseActivity
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         myTrace.start();
-        getWindow().setNavigationBarColor(Color.parseColor("#20111111"));
+//        getWindow().setNavigationBarColor(Color.parseColor("#20111111"));
         setContentView(R.layout.activity_maps);
-        if(CommonUtils.isNavigationBarAvailable(this)){
+        if (CommonUtils.isNavigationBarAvailable(this)) {
             LogUtils.e("Has navibar");
         }
-        LogUtils.e("Navi bar size : "+ CommonUtils.getSoftButtonsBarSizePort(this));
+        LogUtils.e("Navi bar size : " + CommonUtils.getSoftButtonsBarSizePort(this));
         ButterKnife.bind(this);
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
@@ -263,7 +238,6 @@ public class MapsActivity extends BaseActivity
 //            }
 //        }
         myTrace.stop();
-
     }
 
     private void applyFontToMenuItem(MenuItem mi) {
@@ -288,7 +262,6 @@ public class MapsActivity extends BaseActivity
         if (requestCode == Constants.CODE_REQ_ADDRESS) {
             if (resultCode == RESULT_OK) {
                 showSnackBar("Cám ơn bạn đã sử dụng dịch vụ");
-
 //                mAddressDest = data.getBundleExtra(Constants.BUNDLE).getParcelable(Constants.DES);
 //                mAddressFrom = data.getBundleExtra(Constants.BUNDLE).getParcelable(Constants.FROM);
 //                edtFrom.setText(mAddressFrom.getDescription());
@@ -300,46 +273,20 @@ public class MapsActivity extends BaseActivity
 //                    i.putExtra(Constants.BUNDLE, b);
 //                    startActivityForResult(i, Constants.CODE_REQ_BOOKING);
 //                }
+            }else if (resultCode == Constants.RESULT_CHANGE_TYPE_VEHICLE) {
+                clearMarker();
+                if (mLatLng != null)
+                    MainApplication.getInstance().setType(getmSetting().getInt(Constants.TYPE_VEHICLE, 0));
+                getDriverNearby(mLatLng);
             }
         } else if (requestCode == Constants.CODE_REQ_BOOKING) {
             if (resultCode == RESULT_OK) {
-//                bBooking = data.getBundleExtra(Constants.BUNDLE);
-//                if (bBooking != null) {
-//                    final MyPlace mAddressDes = bBooking.getParcelable(Constants.DES);
-//                    final MyPlace mAddressFrom = bBooking.getParcelable(Constants.FROM);
-//                    final int distanceCost = bBooking.getInt(Constants.COST);
-//                    final double distance = bBooking.getDouble(Constants.DISTANCE);
-//                    final Discount promotionCost = bBooking.getParcelable(Constants.PROMOTION);
-//                    final String duration = bBooking.getString(Constants.DURATION);
-//
-//                    Call<ApiResponse<Integer>> createBooking = getmApi().createBooking(ApiConstants.API_KEY
-//                            , getmSetting().getString(Constants.ID)
-//                            , mAddressFrom.getDescription()
-//                            , mAddressDes.getDescription()
-//                            , distanceCost
-//                            , promotionCost != null ? Integer.parseInt(promotionCost.getPr_id()) : 0
-//                            , distance
-//                            , duration);
-//                    createBooking.enqueue(new CallBackCustom<ApiResponse<Integer>>(this, new OnResponse<ApiResponse<Integer>>() {
-//                        @Override
-//                        public void onResponse(ApiResponse<Integer> object) {
-//                            LogUtils.e(object.getData().intValue());
-//                            MainApplication.getInstance().setmIdBooking(object.getData().intValue());
-//                            getmSocket().creatBooking(mAddressFrom.getDescription(), mAddressDes.getDescription()
-//                                    , distanceCost, promotionCost != null ? Integer.parseInt(promotionCost.getPr_id()) : 0, distance, duration, object.getData());
-//                            goixeom.com.activities.CallDriverActivity callDriverActivity = new CallDriverActivity();
-////                            callDriverActivity.setArguments(bBooking);
-////                            trantoTab(callDriverActivity);
-//                            isCanBack = false;
-//                        }
-//                    }));
-//                }
                 showSnackBar("Cám ơn bạn đã sử dụng dịch vụ");
             } else if (resultCode == Constants.RESULT_CHANGE_TYPE_VEHICLE) {
                 clearMarker();
                 if (mLatLng != null)
-                    MainApplication.getInstance().setType(getmSetting().getInt(Constants.TYPE_VEHICLE,0));
-                    getDriverNearby(mLatLng);
+                    MainApplication.getInstance().setType(getmSetting().getInt(Constants.TYPE_VEHICLE, 0));
+                getDriverNearby(mLatLng);
             }
         } else if (requestCode == Constants.CODE_REQ_SETTING) {
             if (resultCode == Constants.RESULT_LOGOUT) {
@@ -406,7 +353,6 @@ public class MapsActivity extends BaseActivity
                     super.onBackPressed();
                     return;
                 }
-
                 this.doubleBackToExitPressedOnce = true;
                 Toast.makeText(this, "Nhấn Back 2 lần thể thoát", Toast.LENGTH_SHORT).show();
 
@@ -467,6 +413,10 @@ public class MapsActivity extends BaseActivity
         startActivity(startMain);
     }
 
+    String pathName;
+    Drawable dBike;
+    Drawable dCar;
+
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
@@ -476,6 +426,12 @@ public class MapsActivity extends BaseActivity
 //        if (!success) {
 //            LogUtils.e( "Style parsing failed.");
 //        }
+        pathName = FileUtils.getFolder(MapsActivity.this) + getString(R.string.bike);
+        dBike = Drawable.createFromPath(pathName);
+        dBike = CommonUtils.resize(dBike, this);
+        pathName = FileUtils.getFolder(MapsActivity.this) + getString(R.string.car);
+        dCar = Drawable.createFromPath(pathName);
+        dCar = CommonUtils.resizeCar(dCar, this);
         MapStyleOptions style = MapStyleOptions.loadRawResourceStyle(this, R.raw.style_json);
         mMap.setMapStyle(style);
         mMap.getUiSettings().setTiltGesturesEnabled(false);
@@ -485,7 +441,7 @@ public class MapsActivity extends BaseActivity
                 new ViewTreeObserver.OnGlobalLayoutListener() {
                     @Override
                     public void onGlobalLayout() {
-                        mMap.setPadding(100, button.getHeight(), 100, 100);
+//                        mMap.setPadding(100, button.getHeight(), 100, 100);
                     }
                 }
         );
@@ -494,23 +450,15 @@ public class MapsActivity extends BaseActivity
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 10000);
             return;
         }
-        // This timer task will be executed every 1 sec.
         timerTask = new Timer();
         timerTask.schedule(new TimerTask() {
             @Override
             public void run() {
-//                LogUtils.e("request driver now");
                 if (mLatLng != null)
                     getDriverNearby(mLatLng);
             }
-        }, 0, Constants.TIME_GET_DRIVER);
-        mMap.setOnCameraIdleListener(new GoogleMap.OnCameraIdleListener() {
-            @Override
-            public void onCameraIdle() {
-//                if(getmSocket()!=null)
-//                    getmSocket().updateLatlng(mMap.getCameraPosition().target.latitude, mMap.getCameraPosition().target.longitude, getCurrentIdUser());
-            }
-        });
+        }, 0, getmSetting().getLong(Constants.TIME_UPDATE,Constants.TIME_GET_DRIVER));
+
     }
 
     @Override
@@ -605,6 +553,7 @@ public class MapsActivity extends BaseActivity
 
     private Handler mPostHandler = new Handler();
     long sec;
+
     private void getDriverNearby(LatLng location) {
         if (!NetworkUtils.isConnected()) return;
         Call<ApiResponse<List<LocationBearing>>> getDrivers = getmApi().getDriver(ApiConstants.API_KEY, location.latitude, location.longitude, MainApplication.getInstance().getType());
@@ -613,7 +562,6 @@ public class MapsActivity extends BaseActivity
             public void onResponse(final ApiResponse<List<LocationBearing>> object) {
                 if (object.getData() != null && object.getData().size() > 0) {
                     LogUtils.e("request + " + object.getData().size());
-//                    Executors.newSingleThreadExecutor().execute(new MarkerHandler(object.getData()));
                     for (Iterator<Map.Entry<Integer, LocationBearing>> it = hashMapMarker.entrySet().iterator(); it.hasNext(); ) {
                         Map.Entry<Integer, LocationBearing> entry = it.next();
                         int key = entry.getKey().intValue();
@@ -644,20 +592,26 @@ public class MapsActivity extends BaseActivity
                             ;
                             Drawable drawable;
                             if (typeVehicle == 0) {
-                                if (Build.VERSION.SDK_INT >= 20) {
-                                    drawable = ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_motorcycle);
-                                } else {
-                                    drawable = AppCompatDrawableManager.get().getDrawable(getApplicationContext(), R.drawable.ic_motorcycle);
-                                }
+//                                if (Build.VERSION.SDK_INT >= 20) {
+//                                    drawable = ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_motorcycle);
+//                                } else {
+//                                    drawable = AppCompatDrawableManager.get().getDrawable(getApplicationContext(), R.drawable.ic_motorcycle);
+//                                }
+                                marker = CommonUtils.addMarker(dBike
+                                        , mMap, newLatlng, rand.nextInt(360) + 1, locationBearing.getD_id() + "");
                             } else {
-                                if (Build.VERSION.SDK_INT >= 20) {
-                                    drawable = ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_car_view_icon);
-                                } else {
-                                    drawable = AppCompatDrawableManager.get().getDrawable(getApplicationContext(), R.drawable.ic_car_view_icon);
-                                }
+//                                if (Build.VERSION.SDK_INT >= 20) {
+////                                     Bitmap myBitmap = BitmapFactory.decodeFile(getExternalFilesDir(null) + File.separator + "goixeom" + File.separator + getString(R.string.car));
+////                                    drawable =      new BitmapDrawable(getResources(), myBitmap);
+//                                    drawable = ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_car_view_icon);
+//                                } else {
+//                                    drawable = AppCompatDrawableManager.get().getDrawable(getApplicationContext(), R.drawable.ic_car_view_icon);
+//                                }
+                                marker = CommonUtils.addMarker(dCar
+                                        , mMap, newLatlng, rand.nextInt(360) + 1, locationBearing.getD_id() + "");
                             }
-                            marker = CommonUtils.addMarker(drawable
-                                    , mMap, newLatlng, rand.nextInt(360) + 1, locationBearing.getD_id() + "");
+//                            marker = CommonUtils.addMarker(dCar
+//                                    , mMap, newLatlng, rand.nextInt(360) + 1, locationBearing.getD_id() + "");
                             locationBearing.setMarker(marker);
                             hashMapMarker.put(locationBearing.getD_id(), locationBearing);
                         }
@@ -726,7 +680,7 @@ public class MapsActivity extends BaseActivity
 
     @Override
     public void run() {
-        getDriverNearby(mMap.getCameraPosition().target);
+//        getDriverNearby(mMap.getCameraPosition().target);
     }
 
     @OnClick(R.id.btn_mylocation)
@@ -815,7 +769,7 @@ public class MapsActivity extends BaseActivity
                 if (mLatLng != null)
                     getDriverNearby(mLatLng);
             }
-        }, 0, Constants.TIME_GET_DRIVER);
+        }, 0, getmSetting().getLong(Constants.TIME_UPDATE,Constants.TIME_GET_DRIVER));
     }
 
 
