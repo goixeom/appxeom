@@ -548,7 +548,7 @@ public class BookingActivity extends BaseActivity implements OnMapReadyCallback 
             case R.id.call: {
                 NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
                 notificationManager.cancel(2);
-                if (directionCustomModel == null) {
+                if (directionCustomModel == null || distanceCost==null) {
                     showDialogErrorContent("Đang tính toán cước phí. Vui lòng chờ...");
                     return;
                 }

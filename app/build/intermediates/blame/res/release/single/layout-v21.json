@@ -1,0 +1,58 @@
+[
+    {
+        "merged": "D:\\LanguageProgram\\Android\\SourceCode\\appxeom\\SkyNetInc\\appxeom\\AppKhachHang\\app\\build\\intermediates\\res\\merged\\release\\layout-v21\\activity_privacy.xml",
+        "source": "D:\\LanguageProgram\\Android\\SourceCode\\appxeom\\SkyNetInc\\appxeom\\AppKhachHang\\app\\src\\main\\res\\layout-v21\\activity_privacy.xml"
+    },
+    {
+        "merged": "D:\\LanguageProgram\\Android\\SourceCode\\appxeom\\SkyNetInc\\appxeom\\AppKhachHang\\app\\build\\intermediates\\res\\merged\\release\\layout-v21\\row_history.xml",
+        "source": "D:\\LanguageProgram\\Android\\SourceCode\\appxeom\\SkyNetInc\\appxeom\\AppKhachHang\\app\\src\\main\\res\\layout-v21\\row_history.xml"
+    },
+    {
+        "merged": "D:\\LanguageProgram\\Android\\SourceCode\\appxeom\\SkyNetInc\\appxeom\\AppKhachHang\\app\\build\\intermediates\\res\\merged\\release\\layout-v21\\row_add_maps.xml",
+        "source": "D:\\LanguageProgram\\Android\\SourceCode\\appxeom\\SkyNetInc\\appxeom\\AppKhachHang\\app\\src\\main\\res\\layout-v21\\row_add_maps.xml"
+    },
+    {
+        "merged": "D:\\LanguageProgram\\Android\\SourceCode\\appxeom\\SkyNetInc\\appxeom\\AppKhachHang\\app\\build\\intermediates\\res\\merged\\release\\layout-v21\\content_history.xml",
+        "source": "D:\\LanguageProgram\\Android\\SourceCode\\appxeom\\SkyNetInc\\appxeom\\AppKhachHang\\app\\src\\main\\res\\layout-v21\\content_history.xml"
+    },
+    {
+        "merged": "D:\\LanguageProgram\\Android\\SourceCode\\appxeom\\SkyNetInc\\appxeom\\AppKhachHang\\app\\build\\intermediates\\res\\merged\\release\\layout-v21\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\DuongKK\\.android\\build-cache\\77c1760345ce21c7d60a8066084bd228a54d3c4c\\output\\res\\layout-v21\\notification_template_icon_group.xml"
+    },
+    {
+        "merged": "D:\\LanguageProgram\\Android\\SourceCode\\appxeom\\SkyNetInc\\appxeom\\AppKhachHang\\app\\build\\intermediates\\res\\merged\\release\\layout-v21\\place_autocomplete_fragment.xml",
+        "source": "C:\\Users\\DuongKK\\.android\\build-cache\\3665e538902210cd5d1985404066c848e0b3e5a5\\output\\res\\layout-v21\\place_autocomplete_fragment.xml"
+    },
+    {
+        "merged": "D:\\LanguageProgram\\Android\\SourceCode\\appxeom\\SkyNetInc\\appxeom\\AppKhachHang\\app\\build\\intermediates\\res\\merged\\release\\layout-v21\\row_footer_maps.xml",
+        "source": "D:\\LanguageProgram\\Android\\SourceCode\\appxeom\\SkyNetInc\\appxeom\\AppKhachHang\\app\\src\\main\\res\\layout-v21\\row_footer_maps.xml"
+    },
+    {
+        "merged": "D:\\LanguageProgram\\Android\\SourceCode\\appxeom\\SkyNetInc\\appxeom\\AppKhachHang\\app\\build\\intermediates\\res\\merged\\release\\layout-v21\\toolbar_back.xml",
+        "source": "D:\\LanguageProgram\\Android\\SourceCode\\appxeom\\SkyNetInc\\appxeom\\AppKhachHang\\app\\src\\main\\res\\layout-v21\\toolbar_back.xml"
+    },
+    {
+        "merged": "D:\\LanguageProgram\\Android\\SourceCode\\appxeom\\SkyNetInc\\appxeom\\AppKhachHang\\app\\build\\intermediates\\res\\merged\\release\\layout-v21\\notification_template_custom_big.xml",
+        "source": "C:\\Users\\DuongKK\\.android\\build-cache\\77c1760345ce21c7d60a8066084bd228a54d3c4c\\output\\res\\layout-v21\\notification_template_custom_big.xml"
+    },
+    {
+        "merged": "D:\\LanguageProgram\\Android\\SourceCode\\appxeom\\SkyNetInc\\appxeom\\AppKhachHang\\app\\build\\intermediates\\res\\merged\\release\\layout-v21\\content_personal.xml",
+        "source": "D:\\LanguageProgram\\Android\\SourceCode\\appxeom\\SkyNetInc\\appxeom\\AppKhachHang\\app\\src\\main\\res\\layout-v21\\content_personal.xml"
+    },
+    {
+        "merged": "D:\\LanguageProgram\\Android\\SourceCode\\appxeom\\SkyNetInc\\appxeom\\AppKhachHang\\app\\build\\intermediates\\res\\merged\\release\\layout-v21\\notification_action.xml",
+        "source": "C:\\Users\\DuongKK\\.android\\build-cache\\77c1760345ce21c7d60a8066084bd228a54d3c4c\\output\\res\\layout-v21\\notification_action.xml"
+    },
+    {
+        "merged": "D:\\LanguageProgram\\Android\\SourceCode\\appxeom\\SkyNetInc\\appxeom\\AppKhachHang\\app\\build\\intermediates\\res\\merged\\release\\layout-v21\\activity_select_address.xml",
+        "source": "D:\\LanguageProgram\\Android\\SourceCode\\appxeom\\SkyNetInc\\appxeom\\AppKhachHang\\app\\src\\main\\res\\layout-v21\\activity_select_address.xml"
+    },
+    {
+        "merged": "D:\\LanguageProgram\\Android\\SourceCode\\appxeom\\SkyNetInc\\appxeom\\AppKhachHang\\app\\build\\intermediates\\res\\merged\\release\\layout-v21\\activity_detail_booking.xml",
+        "source": "D:\\LanguageProgram\\Android\\SourceCode\\appxeom\\SkyNetInc\\appxeom\\AppKhachHang\\app\\src\\main\\res\\layout-v21\\activity_detail_booking.xml"
+    },
+    {
+        "merged": "D:\\LanguageProgram\\Android\\SourceCode\\appxeom\\SkyNetInc\\appxeom\\AppKhachHang\\app\\build\\intermediates\\res\\merged\\release\\layout-v21\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\DuongKK\\.android\\build-cache\\77c1760345ce21c7d60a8066084bd228a54d3c4c\\output\\res\\layout-v21\\notification_action_tombstone.xml"
+    }
+]
