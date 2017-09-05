@@ -58,7 +58,11 @@ public class CustomTypefaceSpan extends TypefaceSpan {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeParcelable((Parcelable) this.newType, flags);
+        try {
+            dest.writeParcelable((Parcelable) this.newType, flags);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     protected CustomTypefaceSpan(Parcel in) {

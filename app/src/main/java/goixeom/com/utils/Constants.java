@@ -62,6 +62,7 @@ public class Constants {
     public static final String TYPE_ADDRESS = "type_address";
     public static final String DIRECTION = "config_direction" ;
     public static final String TIME_UPDATE = "time_update";
+    public static final String TIME_WAIT = "time_wait";
 
 
     public static int POS_LOGIN = 0;

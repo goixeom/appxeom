@@ -64,7 +64,11 @@ public class AdapterDiscount extends RecyclerView.Adapter<AdapterDiscount.ViewHo
                     context.startActivity(i);
                 }
             });
-            Picasso.with(context).load("https://goixeom.com/images/xeomer/duong-nguyen.jpg").into(holder.img);
+            if(discount.getImg()!=null && !discount.getImg().isEmpty()){
+                Picasso.with(context).load(discount.getImg()).into(holder.img);
+            }else{
+                Picasso.with(context).load("https://goixeom.com/images/xeomer/duong-nguyen.jpg").into(holder.img);
+            }
         }
     }
 

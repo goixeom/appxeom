@@ -35,8 +35,18 @@ public class Discount implements Parcelable {
     private String active;
     @SerializedName("type_pr")
     private int typePr;
+    @SerializedName("img")
+    private String img;
     public String getPr_id() {
         return pr_id;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
 
     public void setPr_id(String pr_id) {

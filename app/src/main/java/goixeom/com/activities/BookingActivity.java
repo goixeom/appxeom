@@ -251,7 +251,7 @@ public class BookingActivity extends BaseActivity implements OnMapReadyCallback 
                 getPromotionFirstTime(typeVehicle);
                 getmSetting().put(Constants.TYPE_VEHICLE, typeVehicle);
                 MainApplication.getInstance().setType(typeVehicle);
-                tvPriceMarkerDes.setText(getTotalCost(typeVehicle) / 1000 + "k");
+//                tvPriceMarkerDes.setText(getTotalCost(typeVehicle) / 1000 + "k");
                 setResult(Constants.RESULT_CHANGE_TYPE_VEHICLE);
                 if (mAddressFrom != null) {
                     clearMarker();
@@ -625,6 +625,9 @@ public class BookingActivity extends BaseActivity implements OnMapReadyCallback 
     }
 
     private int getTotalCost(int type) {
+        if(distanceCost == null) {
+            finish();
+        }
         int cost = 0;
         if (type == 0) {
             cost = distanceCost.getBike();

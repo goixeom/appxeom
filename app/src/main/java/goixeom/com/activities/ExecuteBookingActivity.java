@@ -86,6 +86,7 @@ import goixeom.com.socket.SocketResponse;
 import goixeom.com.utils.CommonUtils;
 import goixeom.com.utils.Constants;
 import goixeom.com.utils.FileUtils;
+import goixeom.com.views.CustomRatingBar;
 import retrofit2.Call;
 
 public class ExecuteBookingActivity extends BaseActivity
@@ -147,7 +148,7 @@ public class ExecuteBookingActivity extends BaseActivity
 
 
     @BindView(R.id.rating_bar_driver)
-    RatingBar ratingBarDriver;
+    CustomRatingBar ratingBarDriver;
 
 
     @BindView(R.id.contentview)
@@ -787,14 +788,14 @@ public class ExecuteBookingActivity extends BaseActivity
     @OnClick(R.id.btn_vote)
     public void clickVote() {
         getDialogProgress().showDialog();
-        Call<ApiResponse> rateDriver = getmApi().voteDriver(ApiConstants.API_KEY, mTripInfor.getTrip_info().getIdTrip(), voteType, (int) ratingBarDriver.getRating());
+        Call<ApiResponse> rateDriver = getmApi().voteDriver(ApiConstants.API_KEY, mTripInfor.getTrip_info().getIdTrip(), voteType, (int) ratingBarDriver.getScore());
         rateDriver.enqueue(new CallBackCustom<ApiResponse>(getApplicationContext(), getDialogProgress(), new OnResponse<ApiResponse>() {
             @Override
             public void onResponse(ApiResponse object) {
                 if (object.getStatus() == ApiConstants.CODE_SUCESS) {
                     setResult(RESULT_OK);
-                    if (ratingBarDriver.getRating() >= 1)
-                        getmSocket().rateDriver(mTripInfor.getDriver().getId(), (int) ratingBarDriver.getRating());
+                    if (ratingBarDriver.getScore() >= 1)
+                        getmSocket().rateDriver(mTripInfor.getDriver().getId(), (int) ratingBarDriver.getScore());
                     removeDataBooking();
                     finish();
                 } else {

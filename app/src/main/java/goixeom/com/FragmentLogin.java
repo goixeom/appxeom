@@ -198,7 +198,7 @@ public class FragmentLogin extends BaseFragment implements View.OnClickListener,
     private void sendSms(final String phone) {
         if (MainApplication.getInstance().getCountDownSendCode() != -1
                 && MainApplication.getInstance().getmUser() != null
-                && MainApplication.getInstance().getBundleSendCode()!=null) {
+                && MainApplication.getInstance().getBundleSendCode() != null) {
             User user = MainApplication.getInstance().getmUser();
             if (user.getPhone() != null && user.getPhone().equals(phone)) {
                 FragmentCode fgCode = new FragmentCode();
@@ -380,31 +380,35 @@ public class FragmentLogin extends BaseFragment implements View.OnClickListener,
         sigin.enqueue(new CallBackCustom<ApiResponse<User>>(getContext(), getDialogProgress(), new OnResponse<ApiResponse<User>>() {
             @Override
             public void onResponse(ApiResponse<User> object) {
-                if (object.getData().getPhone() != null && !object.getData().getPhone().isEmpty()) {
-                    getmSetting().put(Constants.PHONE, object.getData().getPhone());
-                    getmSetting().put(Constants.ID, object.getData().getId());
-                    MainApplication.getInstance().setPhoneNumber(object.getData().getPhone());
-                    MainApplication.getInstance().setmUser(object.getData());
-                    Intent intent = new Intent(getContext(), MapsActivity.class);
-                    startActivity(intent);
-                    getActivity().overridePendingTransition(R.anim.enter_from_right, R.anim.exit_to_left);
-                    getActivity().finish();
-                } else {
-                    MainApplication.getInstance().setmUser(object.getData());
-                    MainApplication.getInstance().setmIdAuth(object.getData().getId());
+                if (object.getData() != null) {
+                    if (object.getData().getPhone() != null && !object.getData().getPhone().isEmpty()) {
+                        getmSetting().put(Constants.PHONE, object.getData().getPhone());
+                        getmSetting().put(Constants.ID, object.getData().getId());
+                        MainApplication.getInstance().setPhoneNumber(object.getData().getPhone());
+                        MainApplication.getInstance().setmUser(object.getData());
+                        Intent intent = new Intent(getContext(), MapsActivity.class);
+                        startActivity(intent);
+                        getActivity().overridePendingTransition(R.anim.enter_from_right, R.anim.exit_to_left);
+                        getActivity().finish();
+                    } else {
+                        MainApplication.getInstance().setmUser(object.getData());
+                        MainApplication.getInstance().setmIdAuth(object.getData().getId());
 //                    getmSetting().put(Constants.ID, object.getData().getId());
-                    FragmentUpdate fgUpdate = new FragmentUpdate();
-                    Bundle b = new Bundle();
-                    b.putBoolean(Constants.ISFROMSOCIAL, true);
-                    fgUpdate.setArguments(b);
-                    MainApplication.getInstance().setCountDownSendCode(-1);
-                    ((MainActivity) getActivity()).trantoTab(fgUpdate);
+                        FragmentUpdate fgUpdate = new FragmentUpdate();
+                        Bundle b = new Bundle();
+                        b.putBoolean(Constants.ISFROMSOCIAL, true);
+                        fgUpdate.setArguments(b);
+                        MainApplication.getInstance().setCountDownSendCode(-1);
+                        ((MainActivity) getActivity()).trantoTab(fgUpdate);
 
+                    }
+                } else {
+                        showDialogErrorContent(object.getMessage());
                 }
             }
+
         }));
     }
-
 
 
     private void handleSignInResult(GoogleSignInResult result) {

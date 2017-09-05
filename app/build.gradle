@@ -24,8 +24,8 @@ android {
         targetSdkVersion 25
         renderscriptTargetApi 20
         renderscriptSupportModeEnabled true
-        versionCode 17
-        versionName "2.0"
+        versionCode 21
+        versionName "2.2"
         multiDexEnabled true
         android.defaultConfig.vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -57,7 +57,8 @@ dependencies {
 //        // excluding org.json which is provided by Android
 //        exclude group: 'org.json', module: 'json'
 //    }
-    compile('com.github.nkzawa:socket.io-client:0.5.0') {
+
+    compile('com.github.nkzawa:socket.io-client:0.6.0') {   //ref : https://github.com/socketio/socket.io-client-java/pull/148
         exclude group: 'org.json', module: 'json'
     }
     //    compile 'com.squareup.okhttp3:okhttp:3.4.1'
@@ -84,6 +85,8 @@ dependencies {
     compile 'com.jakewharton:butterknife:8.6.0'
     compile 'com.squareup.retrofit2:retrofit:2.2.0'
     compile 'com.squareup.retrofit2:converter-gson:2.2.0'
+    compile 'com.squareup.okhttp3:okhttp:3.0.0-RC1'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.0.0-RC1' //ref : https://github.com/square/retrofit/issues/1475
     compile 'com.google.code.gson:gson:2.6.1'
     compile 'com.blankj:utilcode:1.5.1'
     compile 'com.wang.avi:library:2.1.3'

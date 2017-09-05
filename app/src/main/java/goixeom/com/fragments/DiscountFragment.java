@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
 import com.makeramen.roundedimageview.RoundedImageView;
+import com.squareup.picasso.Picasso;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -79,6 +80,11 @@ public class DiscountFragment extends Fragment {
                 code.setText(discount.getPr_code());
                 timeStart.setText(discount.getStart_time());
                 timeEnd.setText(discount.getEnd_time());
+                if(discount.getImg()!=null && !discount.getImg().isEmpty()){
+                    Picasso.with(getContext()).load(discount.getImg()).into(img);
+                }else{
+                    Picasso.with(getContext()).load("https://goixeom.com/images/xeomer/duong-nguyen.jpg").into(img);
+                }
             }
         }
     }

@@ -16,6 +16,8 @@ public class AppConfig {
     private String car;
     @SerializedName("time_update")
     private long timeUpdate;
+    @SerializedName("time_wait")
+    private long timeWait;
 
     public long getTimeUpdate() {
         return timeUpdate;
@@ -23,6 +25,14 @@ public class AppConfig {
 
     public void setTimeUpdate(long timeUpdate) {
         this.timeUpdate = timeUpdate;
+    }
+
+    public long getTimeWait() {
+        return timeWait;
+    }
+
+    public void setTimeWait(long timeWait) {
+        this.timeWait = timeWait;
     }
 
     public String getDirection() {

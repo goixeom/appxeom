@@ -67,12 +67,12 @@
     <dimen name="margin_text_ok_dialog_booking">20dp</dimen>
     <dimen name="size_layout_margin_top_detail_discount">100dp</dimen>
     <dimen name="size_margin_top_layout_rate_vote">85dp</dimen>
-    <dimen name="size_text_xephang">16sp</dimen>
+    <dimen name="size_text_xephang">14sp</dimen>
     <dimen name="size_margin_rate_vote">20dp</dimen>
     <dimen name="size_padding_discount">18dp</dimen>
     <dimen name="size_padding_top_discount">14dp</dimen>
     <dimen name="size_margin_dialog_content">24dp</dimen>
-    <dimen name="size_rate_margin_rate_vote">10dp</dimen>
+    <dimen name="size_rate_margin_rate_vote">6dp</dimen>
     <dimen name="size_text_margin_txt_countdown">20dp</dimen>
 
 </resources>

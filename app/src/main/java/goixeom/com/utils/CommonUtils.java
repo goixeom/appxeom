@@ -66,6 +66,7 @@ public class CommonUtils {
     }
 
     public static String getGreateAddressStr(String add) {
+        if(add==null) return "";
         return add.replace(", Hanoi", "").replace(", HaNoi", "").replace(", Hà Nội", "").replace(", Hà nội", "").replace(", Ha noi", "");
     }
     public static void makeCollapsingToolbarLayoutLooksGood(Context context,CollapsingToolbarLayout collapsingToolbarLayout) {

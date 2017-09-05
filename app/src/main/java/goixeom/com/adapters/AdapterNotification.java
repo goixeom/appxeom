@@ -46,6 +46,7 @@ public class AdapterNotification extends RecyclerView.Adapter<AdapterNotificatio
             holder.tvTitle.setText(discount.getTitle());
             holder.tvShort.setText(discount.getContent());
             holder.tvTime.setText("Lúc " + discount.getTime());
+            holder.tvTitle.setSelected(true);
             holder.tvMore.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
