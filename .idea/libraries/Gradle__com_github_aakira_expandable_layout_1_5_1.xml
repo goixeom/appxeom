@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.aakira:expandable-layout-1.5.1">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.android/build-cache/83c65cee6d0e6cf1ba4ce8f6d3f316ebea2eef9a/output/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="file://$USER_HOME$/.android/build-cache/83c65cee6d0e6cf1ba4ce8f6d3f316ebea2eef9a/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/83c65cee6d0e6cf1ba4ce8f6d3f316ebea2eef9a/output/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.aakira/expandable-layout/1.5.1/33539383bb7bdc5144fb047b402767e368257d70/expandable-layout-1.5.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.doctoror.geocoder:library-1.0.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.android/build-cache/c9bc041a0130b3be4f34400f1b20934bcf10a7db/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/c9bc041a0130b3be4f34400f1b20934bcf10a7db/output/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.doctoror.geocoder/library/1.0.0/8839bfd0583eb764fec63fc425763d546d93425c/library-1.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
